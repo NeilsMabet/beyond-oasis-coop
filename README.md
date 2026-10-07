@@ -16,6 +16,7 @@ An experimental two-player ROM hack of **Beyond Oasis** for the Sega Mega Drive 
 - P2 uses the original hero artwork, darkened by 25%, with no P2 label.
 - P2 is invulnerable, but still reacts to hits and has actions interrupted.
 - P1 owns story interactions, dialogue, inventory, pickups and spirits. The camera follows P1; P2 catches up when leaving the screen. Room transitions are shared.
+- Summoned spirits treat P2 as an ally: Dytto, Efreet, Shade and Bow do not select or hit P2 through the tested targeting and attack paths.
 - P2 mirrors P1's current weapon. Durability and ammunition are shared.
 - Direct player attacks do not damage the other player. Original hazards, including bombs, retain their game behavior; P2's invulnerability still applies.
 - During story dialogue and menu graphics transitions, P2 is temporarily hidden/paused. The original game uses that graphics bank for text; P2's artwork reloads afterwards.
@@ -92,7 +93,7 @@ python src/build.py --rom "C:\Games\Beyond Oasis.bin" --assembler "C:\Tools\vasm
 The builder verifies the original ROM, payload, expected original instructions and output SHA-256. The pinned release must reproduce:
 
 ```text
-83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2
+665f32f2f400dd9a3f8a4123a37af7530bb206014efbced6fd4fb45bbfbf41fb
 ```
 
 Generate the BPS patch after building:
@@ -105,7 +106,7 @@ For intentional source changes, developers must regenerate the native adapter ad
 
 ## Validation and known limits
 
-The preceding gameplay build passed **113 checks**. The gold-title update also passed the title pixel comparison and the basic gameplay, feature, local regression, hit reaction serialized rollback and native audit fixture suites. Previous coverage includes local controls, weapons, damage isolation, hit reactions, the first story battle, burning graphics, save/restore, deterministic rollback, allocator exclusions and audited grab/drain handlers. VRAM sampling covered 3,020 frames across seven bounded scenarios.
+This release passed **172 checks**, including 60 spirit regression checks. The old Efreet attack on P2 was reproduced, then the same setup passed with the fix. Coverage includes native target selection, collision masks, real spirit attack tables, 600 ordinary frames per summoned spirit, deterministic state restore, local controls, shared weapons, damage isolation, hit reactions, the first story battle, burning graphics and the memory audit fixtures. VRAM sampling covered 3,020 frames across seven bounded scenarios.
 
 See [validation report](REPORT.md), [technical notes](RESEARCH.md) and machine-readable results in `reports/`. Tests use Python with NumPy/Pillow; native fixtures also require vasm. Some tests need private gameplay save states that are not distributed. Full campaign coverage, every enemy and graphics mode, and internet session acceptance remain unverified.
 

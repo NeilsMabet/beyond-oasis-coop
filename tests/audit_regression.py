@@ -8,6 +8,7 @@ parser=argparse.ArgumentParser();parser.add_argument('--rom',type=Path,default=R
 sys.path.insert(0,str(ROOT))
 from probe import Core
 from verify import put,byte,word
+helpers=json.loads((ROOT.parent/'manifest.json').read_text())['test_helper_addresses']
 rom=args.rom.read_bytes();state=(WS/'work/damage-investigation/user.state').read_bytes();private=WS/'work/coop-audit-fixtures';private.mkdir(exist_ok=True)
 def close(c):c.dll.retro_unload_game();c.dll.retro_deinit()
 def fixture(name,asm,setup):
@@ -133,7 +134,7 @@ for selected_p2 in [False,True]:
   put(c,0x19f4,224 if selected_p2 else 160)
   put(c,0x28a0,250 if selected_p2 else 168)
   put(c,0x28a4,160 if selected_p2 else 224)
- asm='        lea $ff1cd8,a6\n        jsr $30095c\n        lea harmless,a0\n        jsr $300010\n        move.l $ff27fc,$ff0f14\n        move.l $ff2800,$ff0f18\n        jsr $3009c0\n        bra.w freeze\nharmless: move.b $ff2939,$ff0f12\n        rts'
+ asm=f"        lea $ff1cd8,a6\n        jsr ${helpers['grab_lock']:x}\n        lea harmless,a0\n        jsr $300010\n        move.l $ff27fc,$ff0f14\n        move.l $ff2800,$ff0f18\n        jsr ${helpers['grab_unlock']:x}\n        bra.w freeze\nharmless: move.b $ff2939,$ff0f12\n        rts"
  c=fixture('capture-owner-'+str(selected_p2),asm,capture_setup);b=c.ram();close(c)
  checks['capture_owner_stable_'+str(selected_p2)]=bool(b[0xf12]&1)==selected_p2 and int.from_bytes(b[0xf14:0xf18],'big')==(0 if selected_p2 else 16) and int.from_bytes(b[0xf18:0xf1c],'big')==(16 if selected_p2 else 0) and b[0x27fc:0x2804]==bytes(8)
 

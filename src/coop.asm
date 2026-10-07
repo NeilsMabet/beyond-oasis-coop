@@ -326,6 +326,12 @@ hit_recorded:
         rts
 ; Reject only direct hero-to-hero hits; explosions retain their object owner.
 filter_hit:
+; Spirit bodies and their same-type attack clones are allies of both heroes.
+        cmpi.w #$16,(a6)
+        bcs.w filter_hero_attacker
+        cmpi.w #$1e,(a6)
+        bls.w hero_source
+filter_hero_attacker:
         cmpa.l #P1,a6
         beq.w hero_source
         cmpa.l #P2,a6
@@ -349,6 +355,10 @@ enemy_update:
         movem.l d7/a6,-(sp)
         movem.l d0-d3/a0,-(sp)
         clr.w P2+$a0
+; Native types 16/18/1A/1C/1E are summon/Dytto/Efreet/Shade/Bow.
+; Their owner is P1; never run their follow logic against the nearest hero.
+        cmpi.w #$1e,(a6)
+        bls.w target_selected
         tst.b $ff1983
         bne.w target_selected
         cmpi.w #2,P2
@@ -535,6 +545,7 @@ projectile_collision:
         move.w sr,-(sp)
         ext.w d0
         ext.l d0
+        jsr allied_target_mask
         btst #1,P2+$a1
         beq.w projectile_collision_plain
         movem.l d0-d7/a0-a6,-(sp)
@@ -554,6 +565,7 @@ projectile_collision_original:
         jmp $b92a
 body_collision:
         move.w sr,-(sp)
+        jsr allied_target_mask
         btst #1,P2+$a1
         beq.w body_collision_plain
         movem.l d0-d7/a0-a6,-(sp)
@@ -1749,5 +1761,17 @@ gold_map_column:
         rts
         dcb.b $30d100-*,0
         incbin "title-gold.bin"
+; Masked spirit attacks may include every hostile slot in a signed byte mask.
+; Exclude the two reserved co-op actors without changing bombs/enemy hazards.
+        dcb.b $30d800-*,0
+allied_target_mask:
+        cmpi.w #$16,(a6)
+        bcs.w allied_mask_done
+        cmpi.w #$1e,(a6)
+        bhi.w allied_mask_done
+        bclr #19,d0
+        bclr #20,d0
+allied_mask_done:
+        rts
         dcb.b $310000-*,0
 ; Darkened source tiles are derived from the user's original ROM by build.py.

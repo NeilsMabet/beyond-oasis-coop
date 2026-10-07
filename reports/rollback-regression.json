@@ -1,8 +1,5 @@
 {
-  "release": "coop-7",
-  "tested_rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
-  "result": {
-    "erased_attack_and_jump": true,
-    "comparison": "all serialized bytes, no pointer normalization"
-  }
+  "rom_sha256": "665f32f2f400dd9a3f8a4123a37af7530bb206014efbced6fd4fb45bbfbf41fb",
+  "erased_attack_and_jump": true,
+  "comparison": "all serialized bytes, no pointer normalization"
 }

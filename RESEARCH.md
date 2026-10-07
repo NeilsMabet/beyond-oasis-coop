@@ -33,3 +33,8 @@ Unproven or unreachable animation-index candidates from the audit were not chang
 ## Gold title subtitle
 
 Title-only helper at ROM 30D000 loads 54 tiles from 30D100 into D400–DABF. The subtitle tilemap uses palette 2 and plane A at C896/C916/C996. The title background uses tiles 000–452 and palette 0; original text uses 780+ and palette 3. Palette RAM FF138E (palette 2, index 1) is blackened for the outline. Original title load establishes the remaining colors and normal room loading replaces the palette. `title-gold.bin` is the native asset derived from the approved artwork.
+
+
+## Spirit ally targeting (coop-8)
+
+Native hostile scans at BABE, BBAE, BCB4 and BCD2 use slots 4–18 instead of 4–20. Masked scanners B922/B856 remove bits 19/20 only for native allied types 16–1E. The generic update wrapper skips hero position aliasing for these allied types; enemy types keep nearest-live-hero targeting. BEBA allied hit filtering rejects both hero targets. Bomb type 20 is outside the ally range. `tests/spirit_regression.py` exercises native routines and ordinary spirit AI; fixtures and baseline ROMs are private.

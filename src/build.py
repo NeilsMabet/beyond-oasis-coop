@@ -51,6 +51,12 @@ patch(0x82ae,'720636014441','4ef90030001c')
 patch(0x82f8,'362e0016671c','4ef900300020')
 patch(0xb954,'4a6800006f000062','4ef9003000244e71')
 patch(0x3d2e,'51f900ff185d','4ef900300028')
+# Native hostile-object searches start at slot 4. Stop at slot 18:
+# slots 19 and 20 are co-op metadata and the allied second hero.
+patch(0xbabe,'7e10','7e0e') # directional acquisition (Djinn)
+patch(0xbbae,'7e10','7e0e') # directional acquisition (Bow)
+patch(0xbcb4,'7e10','7e0e') # ordinary allied attack sweep
+patch(0xbcd2,'7e10','7e0e') # alternate allied attack sweep
 patch(0xda24,'7011','700f') # DA1A also excludes META/P2
 patch(0xa232,'4a6e00006b0000ec082e00000036','4ef90030004c4e714e714e714e71') # hide P2 while original dialogue owns its bank
 patch(0xda34,'7010','700e')

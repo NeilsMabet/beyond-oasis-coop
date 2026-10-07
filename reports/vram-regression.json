@@ -1,0 +1,63 @@
+{
+  "checks": {
+    "dialogue_guard_exercised_and_body_resumed": true,
+    "all_scenarios_have_active_gameplay": true,
+    "no_layout_or_transfer_conflicts_observed": true,
+    "only_full_screen_hscroll_observed": true
+  },
+  "all_passed": true,
+  "rom_sha256": "665f32f2f400dd9a3f8a4123a37af7530bb206014efbced6fd4fb45bbfbf41fb",
+  "frames": 3020,
+  "modes": [
+    [
+      0,
+      55
+    ]
+  ],
+  "scenarios": [
+    {
+      "scenario": "beach",
+      "frames": 240,
+      "active_frames": 235,
+      "queued_transfers_observed": 226
+    },
+    {
+      "scenario": "combat",
+      "frames": 360,
+      "active_frames": 355,
+      "queued_transfers_observed": 1145
+    },
+    {
+      "scenario": "village",
+      "frames": 240,
+      "active_frames": 235,
+      "queued_transfers_observed": 226
+    },
+    {
+      "scenario": "cave",
+      "frames": 360,
+      "active_frames": 355,
+      "queued_transfers_observed": 320
+    },
+    {
+      "scenario": "fire",
+      "frames": 360,
+      "active_frames": 355,
+      "queued_transfers_observed": 325
+    },
+    {
+      "scenario": "map",
+      "frames": 360,
+      "active_frames": 162,
+      "queued_transfers_observed": 274
+    },
+    {
+      "scenario": "story",
+      "frames": 1100,
+      "active_frames": 204,
+      "queued_transfers_observed": 371
+    }
+  ],
+  "failures": [],
+  "scope": "Bounded scenes and sampled queues; not full campaign coverage or a trace of every direct CPU VDP write."
+}

@@ -16,7 +16,13 @@ def snapshot(c):
          'p2_death_timer':word(b,0x2894),'story_lock':b[0x1983],
          'active_enemy_slots':sum(word(b,0x19e8+188*i)>0 and word(b,0x19e8+188*i)<0x8000 for i in range(4,19))}
 def advance_dialogue(c):
- for _ in range(14):c.run(8,[0]);c.run(60)
+ # The recovered checkpoint can enter the next dialogue later than a fresh
+ # boss kill. Wait for native control release, with a strict 2040-frame bound.
+ for cycle in range(30):
+  c.run(8,[0]);c.run(60)
+  state=snapshot(c)
+  if state['room']=='0x2e3a8' and state['story_lock']==0:return cycle+1
+ return 30
 def close(c):c.dll.retro_unload_game();c.dll.retro_deinit()
 checks={};details={}
 # Revert only the enemy counter to reproduce its original failure, in scratch only.

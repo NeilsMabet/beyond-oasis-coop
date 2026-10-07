@@ -1,40 +1,36 @@
 {
-  "release": "coop-7",
-  "tested_rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
-  "result": {
-    "checks": {
-      "both_players_started_real_attack": true,
-      "same_hit_interrupts_both_attacks": true,
-      "only_p1_loses_hp": true,
-      "no_death_or_respawn": true,
-      "reaction_animation_matches_p1_all_frames": true,
-      "knockback_displacement_matches_p1": true,
-      "knockback_actually_moves_p2": true,
-      "p2_can_move_after_recovery": true,
-      "knocked_back_p2_does_not_damage_p1": true,
-      "lethal_hit_reaction_keeps_p2_alive": true
-    },
-    "details": {
-      "reaction_fields_compared": [
-        "0x4",
-        "0x10",
-        "0x14",
-        "0x16",
-        "0x2a",
-        "0x2c",
-        "0x2e",
-        "0x30",
-        "0x32",
-        "0x56",
-        "0x58",
-        "0x72",
-        "0x74",
-        "0x76",
-        "0x78"
-      ],
-      "maximum_knockback_pixels": 4
-    },
-    "all_passed": true,
-    "rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2"
-  }
+  "checks": {
+    "both_players_started_real_attack": true,
+    "same_hit_interrupts_both_attacks": true,
+    "only_p1_loses_hp": true,
+    "no_death_or_respawn": true,
+    "reaction_animation_matches_p1_all_frames": true,
+    "knockback_displacement_matches_p1": true,
+    "knockback_actually_moves_p2": true,
+    "p2_can_move_after_recovery": true,
+    "knocked_back_p2_does_not_damage_p1": true,
+    "lethal_hit_reaction_keeps_p2_alive": true
+  },
+  "details": {
+    "reaction_fields_compared": [
+      "0x4",
+      "0x10",
+      "0x14",
+      "0x16",
+      "0x2a",
+      "0x2c",
+      "0x2e",
+      "0x30",
+      "0x32",
+      "0x56",
+      "0x58",
+      "0x72",
+      "0x74",
+      "0x76",
+      "0x78"
+    ],
+    "maximum_knockback_pixels": 4
+  },
+  "all_passed": true,
+  "rom_sha256": "665f32f2f400dd9a3f8a4123a37af7530bb206014efbced6fd4fb45bbfbf41fb"
 }

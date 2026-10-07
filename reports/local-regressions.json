@@ -1,73 +1,70 @@
 {
-  "release": "coop-7",
-  "tested_rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
-  "result": {
-    "checks": {
-      "p2_bow_no_self_hit_four_directions": true,
-      "p2_lethal_damage_ignored": true,
-      "p2_damage_does_not_affect_p1": true,
-      "p2_no_respawn_timer": true,
-      "original_enemy_melee_still_hits_p1": true,
-      "p1_damage_unchanged_p2_invulnerable": true,
-      "real_enemy_attack_hits_p2": true,
-      "p2_reacts_to_real_enemy_hit_without_hp_loss": true,
-      "stationary_p1_weapon_art_not_overwritten": true,
-      "p2_has_separate_weapon_tiles": true,
-      "stationary_p2_weapon_art_not_overwritten": true,
-      "map_closed": true,
-      "p2_art_restored_without_movement": true
-    },
-    "all_passed": true,
-    "details": {
-      "bow": [
-        {
-          "direction": 0,
-          "spawned": true,
-          "owner": 16722072,
-          "hp_before": 200,
-          "hp_after": 200
-        },
-        {
-          "direction": 1,
-          "spawned": true,
-          "owner": 16722072,
-          "hp_before": 200,
-          "hp_after": 200
-        },
-        {
-          "direction": 2,
-          "spawned": true,
-          "owner": 16722072,
-          "hp_before": 200,
-          "hp_after": 200
-        },
-        {
-          "direction": 3,
-          "spawned": true,
-          "owner": 16722072,
-          "hp_before": 200,
-          "hp_after": 200
-        }
-      ],
-      "same_attack": {
-        "frame": 276,
-        "pending_damage": [
-          32772,
-          0
-        ]
+  "rom_sha256": "665f32f2f400dd9a3f8a4123a37af7530bb206014efbced6fd4fb45bbfbf41fb",
+  "checks": {
+    "p2_bow_no_self_hit_four_directions": true,
+    "p2_lethal_damage_ignored": true,
+    "p2_damage_does_not_affect_p1": true,
+    "p2_no_respawn_timer": true,
+    "original_enemy_melee_still_hits_p1": true,
+    "p1_damage_unchanged_p2_invulnerable": true,
+    "real_enemy_attack_hits_p2": true,
+    "p2_reacts_to_real_enemy_hit_without_hp_loss": true,
+    "stationary_p1_weapon_art_not_overwritten": true,
+    "p2_has_separate_weapon_tiles": true,
+    "stationary_p2_weapon_art_not_overwritten": true,
+    "map_closed": true,
+    "p2_art_restored_without_movement": true
+  },
+  "all_passed": true,
+  "details": {
+    "bow": [
+      {
+        "direction": 0,
+        "spawned": true,
+        "owner": 16722072,
+        "hp_before": 200,
+        "hp_after": 200
       },
-      "p2_enemy_hit": {
-        "frame": 344,
-        "pending_damage": 32784
+      {
+        "direction": 1,
+        "spawned": true,
+        "owner": 16722072,
+        "hp_before": 200,
+        "hp_after": 200
       },
-      "health_after_same_attack": [
-        196,
-        200
-      ],
-      "weapon_keys": [
-        2304,
-        58
+      {
+        "direction": 2,
+        "spawned": true,
+        "owner": 16722072,
+        "hp_before": 200,
+        "hp_after": 200
+      },
+      {
+        "direction": 3,
+        "spawned": true,
+        "owner": 16722072,
+        "hp_before": 200,
+        "hp_after": 200
+      }
+    ],
+    "same_attack": {
+      "frame": 276,
+      "pending_damage": [
+        32772,
+        0
       ]
-    }
+    },
+    "p2_enemy_hit": {
+      "frame": 344,
+      "pending_damage": 32784
+    },
+    "health_after_same_attack": [
+      196,
+      200
+    ],
+    "weapon_keys": [
+      2304,
+      58
+    ]
   }
 }

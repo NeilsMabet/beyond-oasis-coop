@@ -1,29 +1,25 @@
 {
-  "release": "coop-7",
-  "tested_rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
-  "result": {
-    "checks": {
-      "cold_boot_checksum": true,
-      "independent_movement": true,
-      "independent_jump": true,
-      "independent_attack": true,
-      "catch_up": true,
-      "room_transition": true,
-      "intro_script_progress": true,
-      "p2_immune_to_enemy_damage": true,
-      "p2_damages_enemy": true,
-      "p2_immune_to_lethal_pending_damage": true,
-      "room_transition_keeps_p2_alive": true,
-      "p2_has_no_death_timer": true,
-      "serialize_restore_determinism": true,
-      "direct_friendly_fire_disabled": true,
-      "p2_weapon_switch": true,
-      "p2_shared_sword_wear": true,
-      "broken_weapon_reloads_both": true,
-      "last_sword_unit_no_underflow": true
-    },
-    "all_passed": true,
-    "rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
-    "state_sha256": "06fb05c98b13979a99d0e63334b010ca1a887db336cd8f3792c60e4c22c27889"
-  }
+  "checks": {
+    "cold_boot_checksum": true,
+    "independent_movement": true,
+    "independent_jump": true,
+    "independent_attack": true,
+    "catch_up": true,
+    "room_transition": true,
+    "intro_script_progress": true,
+    "p2_immune_to_enemy_damage": true,
+    "p2_damages_enemy": true,
+    "p2_immune_to_lethal_pending_damage": true,
+    "room_transition_keeps_p2_alive": true,
+    "p2_has_no_death_timer": true,
+    "serialize_restore_determinism": true,
+    "direct_friendly_fire_disabled": true,
+    "p2_weapon_switch": true,
+    "p2_shared_sword_wear": true,
+    "broken_weapon_reloads_both": true,
+    "last_sword_unit_no_underflow": true
+  },
+  "all_passed": true,
+  "rom_sha256": "665f32f2f400dd9a3f8a4123a37af7530bb206014efbced6fd4fb45bbfbf41fb",
+  "state_sha256": "1fad58b7ae621d45c5d80a9e7b39b42f6ca97b3b9808729760977e4300e8833e"
 }

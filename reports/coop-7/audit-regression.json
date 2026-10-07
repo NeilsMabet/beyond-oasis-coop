@@ -1,0 +1,127 @@
+{
+  "release": "coop-7",
+  "tested_rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
+  "result": {
+    "rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
+    "checks": {
+      "da1a_excludes_META_even_when_marker_zero": true,
+      "other_three_allocators_exclude_reserved_slots": true,
+      "small_allocator_does_not_overlap_P2_body_or_weapon": true,
+      "special_attack_selected_P2_writes_only_P2": true,
+      "native_drain_selected_P2_preserves_both_HP": true,
+      "boss_drain_selected_P2_preserves_both_HP": true,
+      "effect_restore_uses_ROM_and_preserves_pending_RAM_data": true,
+      "small_slot_0_keeps_original_bank": true,
+      "small_slot_1_keeps_original_bank": true,
+      "small_slot_2_keeps_original_bank": true,
+      "small_slot_3_keeps_original_bank": true,
+      "small_slot_4_keeps_original_bank": true,
+      "small_slot_5_keeps_original_bank": true,
+      "small_slot_6_keeps_original_bank": true,
+      "small_slot_7_keeps_original_bank": true,
+      "p1_direct-special-attack_retains_original_damage": true,
+      "p1_health-drain_retains_original_damage": true,
+      "p1_boss-drain_retains_original_damage": true,
+      "capture_owner_stable_False": true,
+      "capture_owner_stable_True": true,
+      "room_spawn_clears_capture_ownership": true
+    },
+    "details": {
+      "allocator_da1a": {
+        "routine": "00DA1A",
+        "returned_actor": "FF27DC",
+        "carry": true
+      },
+      "allocator_da2a": {
+        "routine": "00DA2A",
+        "returned_actor": "FF27DC",
+        "carry": true
+      },
+      "allocator_da62": {
+        "routine": "00DA62",
+        "returned_actor": "FF27DC",
+        "carry": true
+      },
+      "allocator_da72": {
+        "routine": "00DA72",
+        "returned_actor": "FF27DC",
+        "carry": true
+      },
+      "small_allocator": {
+        "returned_actor": "FF2B70",
+        "tile": "06A6",
+        "start": "D4C0",
+        "end_exclusive": "D5E0"
+      },
+      "direct-special-attack": {
+        "p1_hp": 196,
+        "p2_hp": 200,
+        "p1_pending": "0000",
+        "p2_pending": "A032",
+        "p1_x": 250,
+        "p2_x": 168,
+        "enemy_state": 2
+      },
+      "health-drain": {
+        "p1_hp": 196,
+        "p2_hp": 200,
+        "p1_pending": "0000",
+        "p2_pending": "0000",
+        "p1_x": 250,
+        "p2_x": 168,
+        "enemy_state": 8
+      },
+      "boss-drain": {
+        "p1_hp": 196,
+        "p2_hp": 200,
+        "p1_pending": "0000",
+        "p2_pending": "0000",
+        "fixture_completed": true,
+        "scope": "Direct invocation of native phase handler 1AB6A, with controlled animation timer and frame offset. Not a natural boss encounter."
+      },
+      "shared_decompress_buffer": {
+        "different_bytes": 0,
+        "original_buffer_sha256": "d865faef98d437c9f0a2340eefff0892350f40cee60c406a7cff4baaf9c0fc78",
+        "after_effect_restore_sha256": "d865faef98d437c9f0a2340eefff0892350f40cee60c406a7cff4baaf9c0fc78",
+        "original_queue": "007f97d4f50004d0",
+        "combined_queue": "007f97d4f50004d0001af880a9000780",
+        "completion": {
+          "False": {
+            "fixture_completed": true,
+            "pc": null
+          },
+          "True": {
+            "fixture_completed": true,
+            "pc": null
+          }
+        },
+        "scope": "Controlled same-frame scheduling: scratch ROM changes the immediate at 1457E from F9FF to FFFF, retaining the interrupt mask so VBlank cannot consume the first transfer. Both native routines finish. Natural campaign coincidence is not established."
+      },
+      "p1-direct-special-attack": {
+        "p1_hp": 196,
+        "p2_hp": 200,
+        "p1_pending": "A032",
+        "p2_pending": "0000"
+      },
+      "p1-health-drain": {
+        "p1_hp": 192,
+        "p2_hp": 200,
+        "p1_pending": "0000",
+        "p2_pending": "0000"
+      },
+      "p1-boss-drain": {
+        "p1_hp": 188,
+        "p2_hp": 200,
+        "p1_pending": "0000",
+        "p2_pending": "0000"
+      },
+      "room_spawn_masks": {
+        "masks": "0000000000000000",
+        "marker": "fffe5032",
+        "room": "0002f1b6",
+        "saved_room": "0002f1b6"
+      }
+    },
+    "scope": "Audit fixtures deliberately set actor phase/pool occupancy; no distributed ROM changes. True checks mean the audited regression passed; controlled fixtures do not establish full campaign coverage."
+  }
+}

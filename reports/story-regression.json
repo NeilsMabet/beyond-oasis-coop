@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "regression_restores_original_wrong_counter": true,
+    "fixture_contains_first_miniboss": true,
+    "unfixed_counter_softlock_reproduced": true,
+    "same_state_reaches_next_story_room": true,
+    "next_story_script_runs": true,
+    "story_releases_player_controls": true,
+    "p2_remains_alive_and_invulnerable": true,
+    "p1_can_move_after_scene": true,
+    "resumed_scene_save_restore_deterministic": true,
+    "fresh_boss_defeat_also_advances": true
+  },
+  "details": {
+    "old_release_after_dialogue": {
+      "script": "0x4382e",
+      "room": "0x2c6f6",
+      "p2_type": 2,
+      "p2_health": 200,
+      "p2_death_timer": 0,
+      "story_lock": 255,
+      "active_enemy_slots": 0
+    },
+    "fixed_release_after_dialogue": {
+      "script": "0x46218",
+      "room": "0x2e3a8",
+      "p2_type": 2,
+      "p2_health": 200,
+      "p2_death_timer": 0,
+      "story_lock": 0,
+      "active_enemy_slots": 2
+    }
+  },
+  "all_passed": true,
+  "rom_sha256": "665f32f2f400dd9a3f8a4123a37af7530bb206014efbced6fd4fb45bbfbf41fb"
+}

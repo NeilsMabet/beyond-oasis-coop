@@ -1,0 +1,19 @@
+{
+  "release": "coop-7",
+  "tested_rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
+  "result": {
+    "checks": {
+      "title_uses_gold_subtitle_tiles": true,
+      "caption_persists_while_start_prompt_blinks": true,
+      "all_pending_damage_modes_ignored": true,
+      "p1_can_still_die": true,
+      "p1_death_does_not_kill_p2": true,
+      "no_p2_health_bar_or_label": true,
+      "p2_hit_reaction_interrupts_movement": true,
+      "p2_survives_repeated_lethal_damage_30_seconds": true
+    },
+    "details": {},
+    "all_passed": true,
+    "rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2"
+  }
+}
