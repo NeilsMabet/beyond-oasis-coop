@@ -1,0 +1,13 @@
+[
+  {
+    "pc": "01AB50",
+    "bytes": "013c00ff1a1a",
+    "instruction": "btst.l d0, #$ff1a1a",
+    "literal_offset": "01AB52",
+    "address": "FF1A1A",
+    "region": "P1 actor",
+    "operand": "1",
+    "confidence": "aligned decode candidate",
+    "access": "pointer/identity"
+  }
+]

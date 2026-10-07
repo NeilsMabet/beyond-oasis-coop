@@ -1,0 +1,115 @@
+diff --git a/core/sound/sound.c b/core/sound/sound.c
+index 40c2bbd..15f47a3 100644
+--- a/core/sound/sound.c
++++ b/core/sound/sound.c
+@@ -580,6 +580,7 @@ int sound_context_save(uint8 *state)
+   bufferptr += psg_context_save(&state[bufferptr]);
+ 
+   save_param(&fm_cycles_start,sizeof(fm_cycles_start));
++  save_param(&fm_cycles_busy,sizeof(fm_cycles_busy));
+ 
+   return bufferptr;
+ }
+@@ -631,6 +632,7 @@ int sound_context_load(uint8 *state)
+   bufferptr += psg_context_load(&state[bufferptr]);
+ 
+   load_param(&fm_cycles_start,sizeof(fm_cycles_start));
++  load_param(&fm_cycles_busy,sizeof(fm_cycles_busy));
+   fm_cycles_count = fm_cycles_start;
+ 
+   return bufferptr;
+@@ -675,3 +677,5 @@ void restore_sound_buffer()
+     }
+   }
+ }
++
++
+diff --git a/core/sound/ym2612.c b/core/sound/ym2612.c
+index 3cba674..7c87f36 100644
+--- a/core/sound/ym2612.c
++++ b/core/sound/ym2612.c
+@@ -2252,8 +2252,17 @@ int YM2612SaveContext(unsigned char *state)
+   uint8 index;
+   int bufferptr = 0;
+ 
+-  /* save YM2612 context */
+-  save_param(&ym2612, sizeof(ym2612));
++  /* Host addresses must never enter rollback/network state. All connections
++   * are reconstructed by YM2612LoadContext, and DT indices follow the struct. */
++  YM2612 saved = ym2612;
++  for (c=0; c<6; c++)
++  {
++    for (s=0; s<4; s++) saved.CH[c].SLOT[s].DT = NULL;
++    saved.CH[c].connect1 = saved.CH[c].connect2 = NULL;
++    saved.CH[c].connect3 = saved.CH[c].connect4 = NULL;
++    saved.CH[c].mem_connect = NULL;
++  }
++  save_param(&saved, sizeof(saved));
+ 
+   /* save DT table index for each channel slots */
+   for (c=0; c<6; c++)
+diff --git a/core/state.c b/core/state.c
+index f830763..40cc686 100644
+--- a/core/state.c
++++ b/core/state.c
+@@ -49,7 +49,7 @@ int state_load(unsigned char *state)
+   char version[17];
+   load_param(version,16);
+   version[16] = 0;
+-  if (memcmp(version,STATE_VERSION,11))
++  if (memcmp(version,STATE_VERSION,16))
+   {
+     return 0;
+   }
+@@ -155,6 +155,7 @@ int state_load(unsigned char *state)
+     load_param(&tmp32, 4); m68k_set_reg(M68K_REG_ISP,tmp32);
+ 
+     load_param(&m68k.cycles, sizeof(m68k.cycles));
++    load_param(&m68k.refresh_cycles, sizeof(m68k.refresh_cycles));
+     load_param(&m68k.int_level, sizeof(m68k.int_level));
+     load_param(&m68k.stopped, sizeof(m68k.stopped));
+   }
+@@ -254,12 +255,16 @@ int state_save(unsigned char *state)
+     tmp32 = m68k_get_reg(M68K_REG_ISP); save_param(&tmp32, 4);
+ 
+     save_param(&m68k.cycles, sizeof(m68k.cycles));
++    save_param(&m68k.refresh_cycles, sizeof(m68k.refresh_cycles));
+     save_param(&m68k.int_level, sizeof(m68k.int_level));
+     save_param(&m68k.stopped, sizeof(m68k.stopped));
+   }
+ 
+   /* Z80 */ 
+-  save_param(&Z80, sizeof(Z80_Regs));
++  Z80_Regs saved_z80 = Z80;
++  saved_z80.irq_callback = NULL;
++  saved_z80.daisy = NULL; /* Genesis has no Z80 daisy chain. */
++  save_param(&saved_z80, sizeof(saved_z80));
+ 
+   /* External HW */
+   if (system_hw == SYSTEM_MCD)
+diff --git a/core/state.h b/core/state.h
+index 7f6e46b..1ad30dc 100644
+--- a/core/state.h
++++ b/core/state.h
+@@ -40,7 +40,7 @@
+ #define _STATE_H_
+ 
+ #define STATE_SIZE    0xfd000
+-#define STATE_VERSION "GENPLUS-GX 1.7.6"
++#define STATE_VERSION "GENPLUS-GX 1.7.C"
+ 
+ #define load_param(param, size) \
+   memcpy(param, &state[bufferptr], size); \
+diff --git a/libretro/libretro.c b/libretro/libretro.c
+index 798c6cc..2549919 100644
+--- a/libretro/libretro.c
++++ b/libretro/libretro.c
+@@ -3125,7 +3125,7 @@ void retro_get_system_info(struct retro_system_info *info)
+ #ifndef GIT_VERSION
+ #define GIT_VERSION ""
+ #endif
+-   info->library_version = "v1.7.4" GIT_VERSION;
++   info->library_version = "v1.7.4-coop1" GIT_VERSION;
+    info->valid_extensions = "m3u|mdx|md|smd|gen|bin|cue|iso|chd|bms|sms|gg|sg|68k|sgd";
+    info->block_extract = false;
+    info->need_fullpath = true;

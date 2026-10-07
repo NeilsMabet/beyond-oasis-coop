@@ -1,0 +1,135 @@
+{
+  "release": "immortal-6",
+  "tested_rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35",
+  "result": {
+    "checks": {
+      "old_damage_transfer_reproduced": true,
+      "old_fire_transfer_reproduced": true,
+      "p2_hits_do_not_damage_distant_p1": true,
+      "p2_keeps_reaction_and_immortality": true,
+      "direct_hits_still_damage_p1": true,
+      "p2_fire_does_not_burn_or_damage_p1": true,
+      "p2_fire_reaction_and_hp_preserved": true,
+      "direct_fire_still_damages_p1": true,
+      "alternate_fire_attack_is_isolated": true,
+      "alternate_fire_immunity_belongs_to_p2": true,
+      "fire_states_replay_deterministically": true,
+      "actual_fire_attacks_preserve_effect_graphics": true
+    },
+    "details": {
+      "supplied_state_sha256": "0bbbe612db415ea8983ea4f20b967de2f48fb1330e3173342f7f50f08223357b",
+      "old_normal": {
+        "p1_hp_before": 196,
+        "p1_hp_after": 194,
+        "p2_hp_after": 200,
+        "hit_seen": [
+          true,
+          false
+        ],
+        "p2_reaction_seen": false
+      },
+      "old_fire": {
+        "p1_hp_before": 196,
+        "p1_hp_after": 188,
+        "p2_hp_after": 200,
+        "burn_seen": [
+          true,
+          false
+        ],
+        "pending_flags": [
+          8200,
+          0
+        ],
+        "immunity_timers": [
+          0,
+          0
+        ],
+        "p2_reaction_seen": false,
+        "graphics_intact": false,
+        "replay_deterministic": true
+      },
+      "normal": {
+        "p1_hp_before": 196,
+        "p1_hp_after": 196,
+        "p2_hp_after": 200,
+        "hit_seen": [
+          false,
+          true
+        ],
+        "p2_reaction_seen": true
+      },
+      "p1_direct_hit": {
+        "p1_hp_before": 196,
+        "p1_hp_after": 182,
+        "p2_hp_after": 200,
+        "hit_seen": [
+          true,
+          false
+        ],
+        "p2_reaction_seen": false
+      },
+      "fire": {
+        "p1_hp_before": 196,
+        "p1_hp_after": 196,
+        "p2_hp_after": 200,
+        "burn_seen": [
+          false,
+          true
+        ],
+        "pending_flags": [
+          0,
+          8200
+        ],
+        "immunity_timers": [
+          0,
+          0
+        ],
+        "p2_reaction_seen": true,
+        "graphics_intact": true,
+        "replay_deterministic": true
+      },
+      "p1_direct_fire": {
+        "p1_hp_before": 196,
+        "p1_hp_after": 188,
+        "p2_hp_after": 200,
+        "burn_seen": [
+          true,
+          false
+        ],
+        "pending_flags": [
+          8200,
+          0
+        ],
+        "immunity_timers": [
+          0,
+          0
+        ],
+        "p2_reaction_seen": false,
+        "graphics_intact": true,
+        "replay_deterministic": true
+      },
+      "alternate_fire": {
+        "p1_hp_before": 196,
+        "p1_hp_after": 196,
+        "p2_hp_after": 200,
+        "burn_seen": [
+          false,
+          true
+        ],
+        "pending_flags": [
+          0,
+          8204
+        ],
+        "immunity_timers": [
+          0,
+          14
+        ],
+        "p2_reaction_seen": true,
+        "graphics_intact": true,
+        "replay_deterministic": true
+      }
+    },
+    "all_passed": true,
+    "rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35"
+  }
+}

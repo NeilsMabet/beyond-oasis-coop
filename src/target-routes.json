@@ -1,0 +1,746 @@
+[
+  {
+    "pc": 107420,
+    "original": "08f9000300ff1a1e",
+    "label": "route_01a39c",
+    "instruction": "bset.b #$3, $ff1a1e.l",
+    "preserves_p2_hp": false,
+    "address": 3148276
+  },
+  {
+    "pc": 107428,
+    "original": "08b9000600ff1a1e",
+    "label": "route_01a3a4",
+    "instruction": "bclr.b #$6, $ff1a1e.l",
+    "preserves_p2_hp": false,
+    "address": 3148318
+  },
+  {
+    "pc": 107436,
+    "original": "0039000c00ff1a20",
+    "label": "route_01a3ac",
+    "instruction": "ori.b #$c, $ff1a20.l",
+    "preserves_p2_hp": false,
+    "address": 3148356
+  },
+  {
+    "pc": 107444,
+    "original": "0239fff300ff1a21",
+    "label": "route_01a3b4",
+    "instruction": "andi.b #$f3, $ff1a21.l",
+    "preserves_p2_hp": false,
+    "address": 3148394
+  },
+  {
+    "pc": 107452,
+    "original": "51f900ff1a6b",
+    "label": "route_01a3bc",
+    "instruction": "sf.b $ff1a6b.l",
+    "preserves_p2_hp": false,
+    "address": 3148432
+  },
+  {
+    "pc": 107458,
+    "original": "33fc000000ff1a12",
+    "label": "route_01a3c2",
+    "instruction": "move.w #$0, $ff1a12.l",
+    "preserves_p2_hp": false,
+    "address": 3148466
+  },
+  {
+    "pc": 107466,
+    "original": "33fc000200ff19ec",
+    "label": "route_01a3ca",
+    "instruction": "move.w #$2, $ff19ec.l",
+    "preserves_p2_hp": false,
+    "address": 3148504
+  },
+  {
+    "pc": 107500,
+    "original": "0c79001400ff1a32",
+    "label": "route_01a3ec",
+    "instruction": "cmpi.w #$14, $ff1a32.l",
+    "preserves_p2_hp": false,
+    "address": 3148542
+  },
+  {
+    "pc": 107538,
+    "original": "0839000300ff1a20",
+    "label": "route_01a412",
+    "instruction": "btst.b #$3, $ff1a20.l",
+    "preserves_p2_hp": false,
+    "address": 3148580
+  },
+  {
+    "pc": 107608,
+    "original": "4ab900ff19f8",
+    "label": "route_01a458",
+    "instruction": "tst.l $ff19f8.l",
+    "preserves_p2_hp": false,
+    "address": 3148618
+  },
+  {
+    "pc": 107618,
+    "original": "4a3900ff1a6a",
+    "label": "route_01a462",
+    "instruction": "tst.b $ff1a6a.l",
+    "preserves_p2_hp": false,
+    "address": 3148652
+  },
+  {
+    "pc": 108152,
+    "original": "0839000300ff1a20",
+    "label": "route_01a678",
+    "instruction": "btst.b #$3, $ff1a20.l",
+    "preserves_p2_hp": false,
+    "address": 3148686
+  },
+  {
+    "pc": 108218,
+    "original": "4ab900ff19f8",
+    "label": "route_01a6ba",
+    "instruction": "tst.l $ff19f8.l",
+    "preserves_p2_hp": false,
+    "address": 3148724
+  },
+  {
+    "pc": 108228,
+    "original": "4a3900ff1a6a",
+    "label": "route_01a6c4",
+    "instruction": "tst.b $ff1a6a.l",
+    "preserves_p2_hp": false,
+    "address": 3148758
+  },
+  {
+    "pc": 108424,
+    "original": "0839000300ff1a20",
+    "label": "route_01a788",
+    "instruction": "btst.b #$3, $ff1a20.l",
+    "preserves_p2_hp": false,
+    "address": 3148792
+  },
+  {
+    "pc": 108508,
+    "original": "4ab900ff19f8",
+    "label": "route_01a7dc",
+    "instruction": "tst.l $ff19f8.l",
+    "preserves_p2_hp": false,
+    "address": 3148830
+  },
+  {
+    "pc": 108518,
+    "original": "4a3900ff1a6a",
+    "label": "route_01a7e6",
+    "instruction": "tst.b $ff1a6a.l",
+    "preserves_p2_hp": false,
+    "address": 3148864
+  },
+  {
+    "pc": 109336,
+    "original": "33ee000800ff19f0",
+    "label": "route_01ab18",
+    "instruction": "move.w $8(a6), $ff19f0.l",
+    "preserves_p2_hp": false,
+    "address": 3148898
+  },
+  {
+    "pc": 109344,
+    "original": "33ee000c00ff19f4",
+    "label": "route_01ab20",
+    "instruction": "move.w $c(a6), $ff19f4.l",
+    "preserves_p2_hp": false,
+    "address": 3148936
+  },
+  {
+    "pc": 109354,
+    "original": "23c000ff1a5a",
+    "label": "route_01ab2a",
+    "instruction": "move.l d0, $ff1a5a.l",
+    "preserves_p2_hp": false,
+    "address": 3148974
+  },
+  {
+    "pc": 109360,
+    "original": "23c000ff1a5e",
+    "label": "route_01ab30",
+    "instruction": "move.l d0, $ff1a5e.l",
+    "preserves_p2_hp": false,
+    "address": 3149008
+  },
+  {
+    "pc": 109366,
+    "original": "33fc004800ff19f8",
+    "label": "route_01ab36",
+    "instruction": "move.w #$48, $ff19f8.l",
+    "preserves_p2_hp": false,
+    "address": 3149042
+  },
+  {
+    "pc": 109374,
+    "original": "33fc000000ff19fe",
+    "label": "route_01ab3e",
+    "instruction": "move.w #$0, $ff19fe.l",
+    "preserves_p2_hp": false,
+    "address": 3149080
+  },
+  {
+    "pc": 109382,
+    "original": "08f9000000ff1a1f",
+    "label": "route_01ab46",
+    "instruction": "bset.b #$0, $ff1a1f.l",
+    "preserves_p2_hp": false,
+    "address": 3149118
+  },
+  {
+    "pc": 109390,
+    "original": "33fc013c00ff1a1a",
+    "label": "route_01ab4e",
+    "instruction": "move.w #$13c, $ff1a1a.l",
+    "preserves_p2_hp": false,
+    "address": 3149156
+  },
+  {
+    "pc": 109496,
+    "original": "33fc004500ff19f8",
+    "label": "route_01abb8",
+    "instruction": "move.w #$45, $ff19f8.l",
+    "preserves_p2_hp": false,
+    "address": 3149194
+  },
+  {
+    "pc": 109516,
+    "original": "303900ff1a72",
+    "label": "route_01abcc",
+    "instruction": "move.w $ff1a72.l, d0",
+    "preserves_p2_hp": false,
+    "address": 3149232
+  },
+  {
+    "pc": 109534,
+    "original": "33c000ff1a72",
+    "label": "route_01abde",
+    "instruction": "move.w d0, $ff1a72.l",
+    "preserves_p2_hp": true,
+    "address": 3149266
+  },
+  {
+    "pc": 109548,
+    "original": "33fc004800ff19f8",
+    "label": "route_01abec",
+    "instruction": "move.w #$48, $ff19f8.l",
+    "preserves_p2_hp": false,
+    "address": 3149322
+  },
+  {
+    "pc": 109564,
+    "original": "51f900ff1982",
+    "label": "route_01abfc",
+    "instruction": "sf.b $ff1982.l",
+    "preserves_p2_hp": false,
+    "address": 3149360
+  },
+  {
+    "pc": 109570,
+    "original": "08b9000300ff1a1e",
+    "label": "route_01ac02",
+    "instruction": "bclr.b #$3, $ff1a1e.l",
+    "preserves_p2_hp": false,
+    "address": 3149398
+  },
+  {
+    "pc": 109578,
+    "original": "08b9000000ff1a1f",
+    "label": "route_01ac0a",
+    "instruction": "bclr.b #$0, $ff1a1f.l",
+    "preserves_p2_hp": false,
+    "address": 3149436
+  },
+  {
+    "pc": 109586,
+    "original": "0239fff300ff1a20",
+    "label": "route_01ac12",
+    "instruction": "andi.b #$f3, $ff1a20.l",
+    "preserves_p2_hp": false,
+    "address": 3149474
+  },
+  {
+    "pc": 109594,
+    "original": "33fc002600ff1a12",
+    "label": "route_01ac1a",
+    "instruction": "move.w #$26, $ff1a12.l",
+    "preserves_p2_hp": false,
+    "address": 3149512
+  },
+  {
+    "pc": 109602,
+    "original": "427900ff19fe",
+    "label": "route_01ac22",
+    "instruction": "clr.w $ff19fe.l",
+    "preserves_p2_hp": false,
+    "address": 3149550
+  },
+  {
+    "pc": 109608,
+    "original": "427900ff19ec",
+    "label": "route_01ac28",
+    "instruction": "clr.w $ff19ec.l",
+    "preserves_p2_hp": false,
+    "address": 3149584
+  },
+  {
+    "pc": 109622,
+    "original": "33c000ff1a6e",
+    "label": "route_01ac36",
+    "instruction": "move.w d0, $ff1a6e.l",
+    "preserves_p2_hp": false,
+    "address": 3149618
+  },
+  {
+    "pc": 109628,
+    "original": "23ce00ff1a66",
+    "label": "route_01ac3c",
+    "instruction": "move.l a6, $ff1a66.l",
+    "preserves_p2_hp": false,
+    "address": 3149652
+  },
+  {
+    "pc": 109634,
+    "original": "33fc000200ff1a6c",
+    "label": "route_01ac42",
+    "instruction": "move.w #$2, $ff1a6c.l",
+    "preserves_p2_hp": false,
+    "address": 3149686
+  },
+  {
+    "pc": 109642,
+    "original": "13fc000100ff1a6a",
+    "label": "route_01ac4a",
+    "instruction": "move.b #$1, $ff1a6a.l",
+    "preserves_p2_hp": false,
+    "address": 3149724
+  },
+  {
+    "pc": 109650,
+    "original": "13fc000600ff1a6b",
+    "label": "route_01ac52",
+    "instruction": "move.b #$6, $ff1a6b.l",
+    "preserves_p2_hp": false,
+    "address": 3149762
+  },
+  {
+    "pc": 109674,
+    "original": "23c100ff1a36",
+    "label": "route_01ac6a",
+    "instruction": "move.l d1, $ff1a36.l",
+    "preserves_p2_hp": false,
+    "address": 3149800
+  },
+  {
+    "pc": 109680,
+    "original": "23c200ff1a3a",
+    "label": "route_01ac70",
+    "instruction": "move.l d2, $ff1a3a.l",
+    "preserves_p2_hp": false,
+    "address": 3149834
+  },
+  {
+    "pc": 109686,
+    "original": "23fc0002800000ff1a3e",
+    "label": "route_01ac76",
+    "instruction": "move.l #$28000, $ff1a3e.l",
+    "preserves_p2_hp": false,
+    "address": 3149868
+  },
+  {
+    "pc": 109696,
+    "original": "23fc0011000000ff1a5e",
+    "label": "route_01ac80",
+    "instruction": "move.l #$110000, $ff1a5e.l",
+    "preserves_p2_hp": false,
+    "address": 3149910
+  },
+  {
+    "pc": 117826,
+    "original": "0839000300ff1a20",
+    "label": "route_01cc42",
+    "instruction": "btst.b #$3, $ff1a20.l",
+    "preserves_p2_hp": false,
+    "address": 3149952
+  },
+  {
+    "pc": 117836,
+    "original": "4ab900ff19f8",
+    "label": "route_01cc4c",
+    "instruction": "tst.l $ff19f8.l",
+    "preserves_p2_hp": false,
+    "address": 3149990
+  },
+  {
+    "pc": 117844,
+    "original": "0c79002800ff1a32",
+    "label": "route_01cc54",
+    "instruction": "cmpi.w #$28, $ff1a32.l",
+    "preserves_p2_hp": false,
+    "address": 3150024
+  },
+  {
+    "pc": 117854,
+    "original": "303900ff19fc",
+    "label": "route_01cc5e",
+    "instruction": "move.w $ff19fc.l, d0",
+    "preserves_p2_hp": false,
+    "address": 3150062
+  },
+  {
+    "pc": 117866,
+    "original": "4a3900ff198b",
+    "label": "route_01cc6a",
+    "instruction": "tst.b $ff198b.l",
+    "preserves_p2_hp": false,
+    "address": 3150096
+  },
+  {
+    "pc": 117874,
+    "original": "4a3900ff1987",
+    "label": "route_01cc72",
+    "instruction": "tst.b $ff1987.l",
+    "preserves_p2_hp": false,
+    "address": 3150130
+  },
+  {
+    "pc": 117882,
+    "original": "303900ff19f0",
+    "label": "route_01cc7a",
+    "instruction": "move.w $ff19f0.l, d0",
+    "preserves_p2_hp": false,
+    "address": 3150164
+  },
+  {
+    "pc": 117896,
+    "original": "303900ff19f4",
+    "label": "route_01cc88",
+    "instruction": "move.w $ff19f4.l, d0",
+    "preserves_p2_hp": false,
+    "address": 3150198
+  },
+  {
+    "pc": 117948,
+    "original": "4a3900ff1989",
+    "label": "route_01ccbc",
+    "instruction": "tst.b $ff1989.l",
+    "preserves_p2_hp": false,
+    "address": 3150232
+  },
+  {
+    "pc": 118004,
+    "original": "323900ff1a72",
+    "label": "route_01ccf4",
+    "instruction": "move.w $ff1a72.l, d1",
+    "preserves_p2_hp": false,
+    "address": 3150266
+  },
+  {
+    "pc": 118020,
+    "original": "33fc000100ff1a6e",
+    "label": "route_01cd04",
+    "instruction": "move.w #$1, $ff1a6e.l",
+    "preserves_p2_hp": false,
+    "address": 3150300
+  },
+  {
+    "pc": 118028,
+    "original": "33ee001600ff1a6c",
+    "label": "route_01cd0c",
+    "instruction": "move.w $16(a6), $ff1a6c.l",
+    "preserves_p2_hp": false,
+    "address": 3150338
+  },
+  {
+    "pc": 118036,
+    "original": "23ce00ff1a66",
+    "label": "route_01cd14",
+    "instruction": "move.l a6, $ff1a66.l",
+    "preserves_p2_hp": false,
+    "address": 3150376
+  },
+  {
+    "pc": 118042,
+    "original": "13fc000100ff1a6a",
+    "label": "route_01cd1a",
+    "instruction": "move.b #$1, $ff1a6a.l",
+    "preserves_p2_hp": false,
+    "address": 3150410
+  },
+  {
+    "pc": 118050,
+    "original": "13fc000600ff1a6b",
+    "label": "route_01cd22",
+    "instruction": "move.b #$6, $ff1a6b.l",
+    "preserves_p2_hp": false,
+    "address": 3150448
+  },
+  {
+    "pc": 118076,
+    "original": "33c100ff1a72",
+    "label": "route_01cd3c",
+    "instruction": "move.w d1, $ff1a72.l",
+    "preserves_p2_hp": true,
+    "address": 3150486
+  },
+  {
+    "pc": 132988,
+    "original": "08f9000600ff1a1e",
+    "label": "route_02077c",
+    "instruction": "bset.b #$6, $ff1a1e.l",
+    "preserves_p2_hp": false,
+    "address": 3150542
+  },
+  {
+    "pc": 132996,
+    "original": "0039000c00ff1a20",
+    "label": "route_020784",
+    "instruction": "ori.b #$c, $ff1a20.l",
+    "preserves_p2_hp": false,
+    "address": 3150584
+  },
+  {
+    "pc": 133004,
+    "original": "0239fff300ff1a21",
+    "label": "route_02078c",
+    "instruction": "andi.b #$f3, $ff1a21.l",
+    "preserves_p2_hp": false,
+    "address": 3150622
+  },
+  {
+    "pc": 133012,
+    "original": "51f900ff1a6b",
+    "label": "route_020794",
+    "instruction": "sf.b $ff1a6b.l",
+    "preserves_p2_hp": false,
+    "address": 3150660
+  },
+  {
+    "pc": 133018,
+    "original": "33fc000200ff19ec",
+    "label": "route_02079a",
+    "instruction": "move.w #$2, $ff19ec.l",
+    "preserves_p2_hp": false,
+    "address": 3150694
+  },
+  {
+    "pc": 133030,
+    "original": "0c79000300ff19fe",
+    "label": "route_0207a6",
+    "instruction": "cmpi.w #$3, $ff19fe.l",
+    "preserves_p2_hp": false,
+    "address": 3150732
+  },
+  {
+    "pc": 133060,
+    "original": "33c000ff1a12",
+    "label": "route_0207c4",
+    "instruction": "move.w d0, $ff1a12.l",
+    "preserves_p2_hp": false,
+    "address": 3150770
+  },
+  {
+    "pc": 133066,
+    "original": "42b900ff1a5a",
+    "label": "route_0207ca",
+    "instruction": "clr.l $ff1a5a.l",
+    "preserves_p2_hp": false,
+    "address": 3150804
+  },
+  {
+    "pc": 133072,
+    "original": "42b900ff1a5e",
+    "label": "route_0207d0",
+    "instruction": "clr.l $ff1a5e.l",
+    "preserves_p2_hp": false,
+    "address": 3150838
+  },
+  {
+    "pc": 133126,
+    "original": "51f900ff1982",
+    "label": "route_020806",
+    "instruction": "sf.b $ff1982.l",
+    "preserves_p2_hp": false,
+    "address": 3150872
+  },
+  {
+    "pc": 133132,
+    "original": "51f900ff1987",
+    "label": "route_02080c",
+    "instruction": "sf.b $ff1987.l",
+    "preserves_p2_hp": false,
+    "address": 3150910
+  },
+  {
+    "pc": 133138,
+    "original": "08b9000600ff1a1e",
+    "label": "route_020812",
+    "instruction": "bclr.b #$6, $ff1a1e.l",
+    "preserves_p2_hp": false,
+    "address": 3150944
+  },
+  {
+    "pc": 133146,
+    "original": "0239fff300ff1a20",
+    "label": "route_02081a",
+    "instruction": "andi.b #$f3, $ff1a20.l",
+    "preserves_p2_hp": false,
+    "address": 3150982
+  },
+  {
+    "pc": 133154,
+    "original": "33fc000000ff1a12",
+    "label": "route_020822",
+    "instruction": "move.w #$0, $ff1a12.l",
+    "preserves_p2_hp": false,
+    "address": 3151020
+  },
+  {
+    "pc": 133162,
+    "original": "33fc000000ff19ec",
+    "label": "route_02082a",
+    "instruction": "move.w #$0, $ff19ec.l",
+    "preserves_p2_hp": false,
+    "address": 3151058
+  },
+  {
+    "pc": 133730,
+    "original": "4a3900ff1989",
+    "label": "route_020a62",
+    "instruction": "tst.b $ff1989.l",
+    "preserves_p2_hp": false,
+    "address": 3151096
+  },
+  {
+    "pc": 133748,
+    "original": "577900ff1a76",
+    "label": "route_020a74",
+    "instruction": "subq.w #$3, $ff1a76.l",
+    "preserves_p2_hp": false,
+    "address": 3151130
+  },
+  {
+    "pc": 133758,
+    "original": "427900ff1a76",
+    "label": "route_020a7e",
+    "instruction": "clr.w $ff1a76.l",
+    "preserves_p2_hp": false,
+    "address": 3151164
+  },
+  {
+    "pc": 133766,
+    "original": "41f900ff19e8",
+    "label": "route_020a86",
+    "instruction": "lea.l $ff19e8.l, a0",
+    "preserves_p2_hp": false,
+    "address": 3151198
+  },
+  {
+    "pc": 133880,
+    "original": "33c000ff19fe",
+    "label": "route_020af8",
+    "instruction": "move.w d0, $ff19fe.l",
+    "preserves_p2_hp": false,
+    "address": 3151232
+  },
+  {
+    "pc": 133916,
+    "original": "33c100ff1a12",
+    "label": "route_020b1c",
+    "instruction": "move.w d1, $ff1a12.l",
+    "preserves_p2_hp": false,
+    "address": 3151266
+  },
+  {
+    "pc": 146194,
+    "original": "303900ff19f0",
+    "label": "route_023b12",
+    "instruction": "move.w $ff19f0.l, d0",
+    "preserves_p2_hp": false,
+    "address": 3151300
+  },
+  {
+    "pc": 146218,
+    "original": "0839000300ff1a20",
+    "label": "route_023b2a",
+    "instruction": "btst.b #$3, $ff1a20.l",
+    "preserves_p2_hp": false,
+    "address": 3151334
+  },
+  {
+    "pc": 146230,
+    "original": "0c79001400ff1a32",
+    "label": "route_023b36",
+    "instruction": "cmpi.w #$14, $ff1a32.l",
+    "preserves_p2_hp": false,
+    "address": 3151372
+  },
+  {
+    "pc": 146242,
+    "original": "23ce00ff1a66",
+    "label": "route_023b42",
+    "instruction": "move.l a6, $ff1a66.l",
+    "preserves_p2_hp": false,
+    "address": 3151410
+  },
+  {
+    "pc": 146248,
+    "original": "13fc000100ff1a6a",
+    "label": "route_023b48",
+    "instruction": "move.b #$1, $ff1a6a.l",
+    "preserves_p2_hp": false,
+    "address": 3151444
+  },
+  {
+    "pc": 146256,
+    "original": "13fc000600ff1a6b",
+    "label": "route_023b50",
+    "instruction": "move.b #$6, $ff1a6b.l",
+    "preserves_p2_hp": false,
+    "address": 3151482
+  },
+  {
+    "pc": 146264,
+    "original": "33fca03200ff1a6e",
+    "label": "route_023b58",
+    "instruction": "move.w #$a032, $ff1a6e.l",
+    "preserves_p2_hp": false,
+    "address": 3151520
+  },
+  {
+    "pc": 146272,
+    "original": "33fc000200ff1a6c",
+    "label": "route_023b60",
+    "instruction": "move.w #$2, $ff1a6c.l",
+    "preserves_p2_hp": false,
+    "address": 3151558
+  },
+  {
+    "pc": 146298,
+    "original": "23c100ff1a36",
+    "label": "route_023b7a",
+    "instruction": "move.l d1, $ff1a36.l",
+    "preserves_p2_hp": false,
+    "address": 3151596
+  },
+  {
+    "pc": 146304,
+    "original": "23c200ff1a3a",
+    "label": "route_023b80",
+    "instruction": "move.l d2, $ff1a3a.l",
+    "preserves_p2_hp": false,
+    "address": 3151630
+  },
+  {
+    "pc": 146310,
+    "original": "23fc0002800000ff1a3e",
+    "label": "route_023b86",
+    "instruction": "move.l #$28000, $ff1a3e.l",
+    "preserves_p2_hp": false,
+    "address": 3151664
+  }
+]

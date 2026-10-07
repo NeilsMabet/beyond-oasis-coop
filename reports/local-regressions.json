@@ -1,0 +1,73 @@
+{
+  "release": "immortal-6",
+  "tested_rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35",
+  "result": {
+    "checks": {
+      "p2_bow_no_self_hit_four_directions": true,
+      "p2_lethal_damage_ignored": true,
+      "p2_damage_does_not_affect_p1": true,
+      "p2_no_respawn_timer": true,
+      "original_enemy_melee_still_hits_p1": true,
+      "p1_damage_unchanged_p2_invulnerable": true,
+      "real_enemy_attack_hits_p2": true,
+      "p2_reacts_to_real_enemy_hit_without_hp_loss": true,
+      "stationary_p1_weapon_art_not_overwritten": true,
+      "p2_has_separate_weapon_tiles": true,
+      "stationary_p2_weapon_art_not_overwritten": true,
+      "map_closed": true,
+      "p2_art_restored_without_movement": true
+    },
+    "all_passed": true,
+    "details": {
+      "bow": [
+        {
+          "direction": 0,
+          "spawned": true,
+          "owner": 16722072,
+          "hp_before": 200,
+          "hp_after": 200
+        },
+        {
+          "direction": 1,
+          "spawned": true,
+          "owner": 16722072,
+          "hp_before": 200,
+          "hp_after": 200
+        },
+        {
+          "direction": 2,
+          "spawned": true,
+          "owner": 16722072,
+          "hp_before": 200,
+          "hp_after": 200
+        },
+        {
+          "direction": 3,
+          "spawned": true,
+          "owner": 16722072,
+          "hp_before": 200,
+          "hp_after": 200
+        }
+      ],
+      "same_attack": {
+        "frame": 338,
+        "pending_damage": [
+          32772,
+          0
+        ]
+      },
+      "p2_enemy_hit": {
+        "frame": 96,
+        "pending_damage": 4
+      },
+      "health_after_same_attack": [
+        196,
+        200
+      ],
+      "weapon_keys": [
+        2304,
+        58
+      ]
+    }
+  }
+}

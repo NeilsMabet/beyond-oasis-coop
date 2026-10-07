@@ -1,0 +1,11 @@
+generated/
+__pycache__/
+*.pyc
+*.lst
+*.state
+*.state*
+*.srm
+*.ram
+*.sav
+.env
+.env.*

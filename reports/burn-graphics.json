@@ -1,0 +1,67 @@
+{
+  "release": "immortal-6",
+  "tested_rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35",
+  "result": {
+    "checks": {
+      "case_0_effects_intact": true,
+      "case_0_both_bodies_intact": true,
+      "case_0_burn_visible": true,
+      "case_0_p2_banks_migrated": true,
+      "case_0_deterministic": true,
+      "case_1_effects_intact": true,
+      "case_1_both_bodies_intact": true,
+      "case_1_burn_visible": true,
+      "case_1_p2_banks_migrated": true,
+      "case_1_deterministic": true,
+      "case_2_effects_intact": true,
+      "case_2_both_bodies_intact": true,
+      "case_2_burn_visible": true,
+      "case_2_p2_banks_migrated": true,
+      "case_2_deterministic": true
+    },
+    "details": {
+      "state_sha256": "13007b99c4986916adb95800d8f2dfabf248dd6cf15df671f168bcbba86bb4a0",
+      "effect_bank_bytes": 3840,
+      "scenarios": [
+        {
+          "burn_target": 0,
+          "bodies_match_original_frames": [
+            true,
+            true
+          ],
+          "effects_match": true,
+          "burn_seen": [
+            true,
+            false
+          ]
+        },
+        {
+          "burn_target": 1,
+          "bodies_match_original_frames": [
+            true,
+            true
+          ],
+          "effects_match": true,
+          "burn_seen": [
+            false,
+            true
+          ]
+        },
+        {
+          "burn_target": 2,
+          "bodies_match_original_frames": [
+            true,
+            true
+          ],
+          "effects_match": true,
+          "burn_seen": [
+            true,
+            true
+          ]
+        }
+      ]
+    },
+    "all_passed": true,
+    "rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35"
+  }
+}
