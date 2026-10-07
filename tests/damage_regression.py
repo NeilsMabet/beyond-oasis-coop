@@ -75,7 +75,7 @@ if args.baseline_rom:
  details['old_normal']=old;details['old_fire']=oldfire
 normal=ordinary(ROM);legitimate=ordinary(ROM,True);flame=fire(ROM);p1flame=fire(ROM,True);secondflame=fire(ROM,attack=0xc)
 checks['p2_hits_do_not_damage_distant_p1']=normal['p1_hp_after']==normal['p1_hp_before'] and normal['hit_seen']==[False,True]
-checks['p2_keeps_reaction_and_immortality']=normal['p2_hp_after']==200 and normal['p2_reaction_seen']
+checks['p2_keeps_reaction_and_invulnerability']=normal['p2_hp_after']==200 and normal['p2_reaction_seen']
 checks['direct_hits_still_damage_p1']=legitimate['p1_hp_after']<legitimate['p1_hp_before']
 checks['p2_fire_does_not_burn_or_damage_p1']=flame['p1_hp_after']==flame['p1_hp_before'] and flame['burn_seen']==[False,True]
 checks['p2_fire_reaction_and_hp_preserved']=flame['p2_reaction_seen'] and flame['p2_hp_after']==200

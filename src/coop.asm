@@ -595,7 +595,7 @@ dark_art:
         beq.w body_bank_ready
         move.w #$05c0,P2+$18
         move.w #$ffff,P2+$34
-; Old Immortal5 states may have P2 art over these item slots. Invalidate
+; Older co-op states may have P2 art over these item slots. Invalidate
 ; their cached mappings so every live object reuploads its original tiles.
         move.w #$ffff,$ff2af0
         move.w #$ffff,$ff2b4a

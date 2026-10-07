@@ -1,4 +1,4 @@
-# Immortal6 вЂ” local co-op memory audit fixes
+# Beyond Oasis Coop РІР‚вЂќ local co-op memory audit fixes
 
 Two-player Beyond Oasis prototype with darkened original P2 artwork, no P2 label, invulnerability and hit reactions.
 
@@ -9,3 +9,7 @@ Fixes P2/native item graphics overlap, shared decompression-buffer corruption, r
 **Patcher-only archive:** Windows BPS patcher and patch sources. Supply your own supported original ROM. Neither archive contains a game ROM.
 
 See README.md for supported SHA-256 and instructions.
+
+The ROM is intended for any compatible Mega Drive / Genesis emulator on any platform with two controller ports. Tested setup: RetroArch 1.22.2 with Genesis Plus GX v1.7.4-coop1 on Windows.
+
+[English instructions](https://github.com/NeilsMabet/beyond-oasis-coop/blob/main/README.md) | [Русская инструкция](https://github.com/NeilsMabet/beyond-oasis-coop/blob/main/README.ru.md)

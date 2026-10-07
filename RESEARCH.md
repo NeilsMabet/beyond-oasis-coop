@@ -1,4 +1,4 @@
-# Immortal6 technical notes
+# Beyond Oasis Coop technical notes
 
 ## Actor RAM
 

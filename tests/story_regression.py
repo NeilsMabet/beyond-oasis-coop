@@ -37,7 +37,7 @@ with tempfile.TemporaryDirectory(prefix='beyond-oasis-regression-') as temp:
  checks['same_state_reaches_next_story_room']=fixed['room']=='0x2e3a8' and fixed['room']!=before['room']
  checks['next_story_script_runs']=fixed['script']=='0x46218'
  checks['story_releases_player_controls']=fixed['story_lock']==0
- checks['p2_remains_alive_and_immortal']=fixed['p2_type']==2 and fixed['p2_health']==200 and fixed['p2_death_timer']==0
+ checks['p2_remains_alive_and_invulnerable']=fixed['p2_type']==2 and fixed['p2_health']==200 and fixed['p2_death_timer']==0
  details['fixed_release_after_dialogue']=fixed
  x=word(c.ram(),0x19f0);c.run(20,[7]);checks['p1_can_move_after_scene']=word(c.ram(),0x19f0)>x
  c.capture=True;c.run(1);Image.fromarray(c.picture).resize((640,448),Image.Resampling.NEAREST).save(ROOT.parent/'story-preview.png')

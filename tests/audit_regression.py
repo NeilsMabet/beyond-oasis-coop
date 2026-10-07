@@ -4,11 +4,11 @@ These establish code behavior, not a claim of encountering every case in play.
 from pathlib import Path
 import argparse,sys,json,hashlib,subprocess,ctypes as C,struct
 ROOT=Path(__file__).resolve().parent;WS=ROOT.parents[2]
-parser=argparse.ArgumentParser();parser.add_argument('--rom',type=Path,default=ROOT.parent/'generated/Beyond Oasis Coop Immortal.bin');parser.add_argument('--assembler',type=Path,default=WS/'work/vasmm68k_mot.exe');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--rom',type=Path,default=ROOT.parent/'generated/Beyond Oasis Coop.bin');parser.add_argument('--assembler',type=Path,default=WS/'work/vasmm68k_mot.exe');args=parser.parse_args()
 sys.path.insert(0,str(ROOT))
 from probe import Core
 from verify import put,byte,word
-rom=args.rom.read_bytes();state=(WS/'work/damage-investigation/user.state').read_bytes();private=WS/'work/immortal6-audit-fixtures';private.mkdir(exist_ok=True)
+rom=args.rom.read_bytes();state=(WS/'work/damage-investigation/user.state').read_bytes();private=WS/'work/coop-audit-fixtures';private.mkdir(exist_ok=True)
 def close(c):c.dll.retro_unload_game();c.dll.retro_deinit()
 def fixture(name,asm,setup):
  code='        org $30f000\n        ori.w #$700,sr\n        clr.w $ff0f10\n'+asm+'\nfreeze: ori.w #$700,sr\n        move.w #$beef,$ff0f10\n        bra.s freeze\n'

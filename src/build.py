@@ -6,7 +6,7 @@ from effects import decode
 root=pathlib.Path(__file__).resolve().parent
 parser=argparse.ArgumentParser()
 parser.add_argument('--rom',required=True,type=pathlib.Path)
-parser.add_argument('--output',type=pathlib.Path,default=root.parent/'generated/Beyond Oasis Coop Immortal.bin')
+parser.add_argument('--output',type=pathlib.Path,default=root.parent/'generated/Beyond Oasis Coop.bin')
 parser.add_argument('--assembler',type=pathlib.Path)
 args=parser.parse_args()
 if args.rom.resolve()==args.output.resolve():raise SystemExit('Refusing to overwrite original ROM')

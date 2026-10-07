@@ -1,6 +1,8 @@
-# Beyond Oasis Co-op
+# Beyond Oasis Coop
 
-An experimental two-player ROM hack of **Beyond Oasis** for the Sega Mega Drive / Genesis. **Immortal6** focuses on local co-op and fixes identified by the P2 memory audit.
+[Русский](README.ru.md) | English
+
+An experimental two-player ROM hack of **Beyond Oasis** for the Sega Mega Drive / Genesis. **Beyond Oasis Coop** focuses on local co-op and fixes identified by the P2 memory audit.
 
 ## Current gameplay
 
@@ -12,7 +14,7 @@ An experimental two-player ROM hack of **Beyond Oasis** for the Sega Mega Drive 
 - Direct player attacks do not damage the other player. Original hazards, including bombs, retain their game behavior; P2's invulnerability still applies.
 - During story dialogue and menu graphics transitions, P2 is temporarily hidden/paused. The original game uses that graphics bank for text; P2's artwork reloads afterwards.
 
-**This is a prototype, not a verified full-campaign co-op conversion.** Immortal6 has not undergone new internet play testing. Save states from selected earlier builds were tested, but new Immortal6 states are recommended.
+**This is a prototype, not a verified full-campaign co-op conversion.** Beyond Oasis Coop has not undergone new internet play testing. Save states from selected earlier builds were tested, but new states from this release are recommended.
 
 ## Required original ROM
 
@@ -24,15 +26,24 @@ eb19bda4982366a2fd43d65ab8a7f9709d83a8cc902c14a682c088c16359c263
 
 Only this exact dump is supported. A different filename does not matter; different contents do. The patcher refuses mismatched files and never overwrites the original. This repository and its release archives do not contain an original or patched game ROM.
 
-## Play on Windows
+## Play on any platform
 
-1. Download and extract the full **Immortal6** release archive, or download this repository.
-2. Run `Create-Coop-ROM.cmd` and select your original ROM. The result is `generated/Beyond Oasis Coop Immortal.bin`.
-3. Install **RetroArch 1.22.2** separately. Run `Play-Local.cmd` and select `retroarch.exe` when prompted. The tested **Genesis Plus GX v1.7.4-coop1** core is included in `core/`.
-4. Connect both controllers before starting. In RetroArch, open **Settings в†’ Input в†’ RetroPad Binds** and assign the two devices to Port 1 and Port 2. The configuration uses three-button Mega Drive controllers.
-5. Start the game with P1. P2 joins as the helper during gameplay.
+The patched ROM is intended for **any compatible Mega Drive / Genesis emulator on any platform**, with two controller ports enabled. Windows and RetroArch are not requirements of the ROM. Compatibility with every emulator has not been individually tested.
 
-The small **patcher-only** archive creates the same ROM but does not include the emulator core or local launcher. Use the full archive for the tested configuration. RetroArch itself is not modified or bundled. The bundled core contains earlier state-serialization changes; it was not changed for Immortal6. See [third-party notices](THIRD_PARTY_NOTICES.md).
+1. Apply `beyond-oasis-coop.bps` to your supported original ROM with a BPS patcher available on your platform. Alternatively, build it with Python as described below.
+2. Open the resulting `Beyond Oasis Coop.bin` in your emulator.
+3. Enable two standard three-button Mega Drive controllers and assign a separate input device to each port.
+4. Start the game with P1; P2 appears as the helper during gameplay.
+
+### Tested Windows setup (optional)
+
+Tests were run with **RetroArch 1.22.2** and **Genesis Plus GX v1.7.4-coop1**. The full release includes this core and its complete source, plus Windows convenience scripts:
+
+1. Run `Create-Coop-ROM.cmd` and select your original ROM. Output: `generated/Beyond Oasis Coop.bin`.
+2. Install RetroArch separately. Run `Play-Local.cmd` and select `retroarch.exe`.
+3. Assign separate devices to Port 1 and Port 2 in RetroArch's input settings.
+
+The launcher selects the bundled core. Other compatible emulators can load the patched ROM directly. The patcher-only archive omits the core and launcher. RetroArch itself is not modified or bundled; the core contains earlier state-serialization changes. See [third-party notices](THIRD_PARTY_NOTICES.md).
 
 ### Other ROM revisions
 
@@ -48,7 +59,7 @@ Internet co-op is intended to use emulator netplay. Use the same patched ROM, co
 
 ## Build the ROM from source
 
-Python 3 is required for the source build, but not for the Windows BPS patcher.
+Python 3 is required for the source build and can be used on Windows, macOS or Linux. It is not required when applying the BPS patch with a separate patcher.
 
 ```powershell
 python src/build.py --rom "C:\Games\Beyond Oasis.bin"
@@ -76,13 +87,13 @@ For intentional source changes, developers must regenerate the native adapter ad
 
 ## Validation and known limits
 
-**113 checks passed** on the pinned Immortal6 ROM. Coverage includes local controls, weapons, damage isolation, hit reactions, the first story battle, burning graphics, save/restore, deterministic rollback, allocator exclusions and audited grab/drain handlers. VRAM sampling covered 3,020 frames across seven bounded scenarios.
+**113 checks passed** on the pinned Beyond Oasis Coop ROM. Coverage includes local controls, weapons, damage isolation, hit reactions, the first story battle, burning graphics, save/restore, deterministic rollback, allocator exclusions and audited grab/drain handlers. VRAM sampling covered 3,020 frames across seven bounded scenarios.
 
 See [validation report](REPORT.md), [technical notes](RESEARCH.md) and machine-readable results in `reports/`. Tests use Python with NumPy/Pillow; native fixtures also require vasm. Some tests need private gameplay save states that are not distributed. Full campaign coverage, every enemy and graphics mode, and internet session acceptance remain unverified.
 
 ## Reporting a bug
 
-Include the Immortal6 build/hash, emulator and core versions, room or encounter, player actions and a screenshot. A short reproducible sequence is especially useful. Do not attach game ROMs to issues. An older save state may carry old graphics/cache data; mention which build created it.
+Include the Beyond Oasis Coop build/hash, emulator and core versions, room or encounter, player actions and a screenshot. A short reproducible sequence is especially useful. Do not attach game ROMs to issues. An older save state may carry old graphics/cache data; mention which build created it.
 
 ## Credits and distribution
 

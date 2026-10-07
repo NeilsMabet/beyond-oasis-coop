@@ -1,6 +1,6 @@
 param(
     [string]$Rom = '',
-    [string]$Output = (Join-Path $PSScriptRoot 'generated\Beyond Oasis Coop Immortal.bin')
+    [string]$Output = (Join-Path $PSScriptRoot 'generated\Beyond Oasis Coop.bin')
 )
 $ErrorActionPreference = 'Stop'
 if (-not (Test-Path -LiteralPath $Rom)) {
@@ -18,7 +18,7 @@ $inputPath = (Resolve-Path -LiteralPath $Rom).Path
 $outputPath = [IO.Path]::GetFullPath($Output)
 if ($inputPath -eq $outputPath) { throw 'Output must differ from the original ROM.' }
 if ((Get-FileHash -LiteralPath $inputPath -Algorithm SHA256).Hash -ne $manifest.original_sha256) { throw 'Unsupported ROM SHA-256.' }
-$patchPath = Join-Path $PSScriptRoot 'beyond-oasis-coop-immortal.bps'
+$patchPath = Join-Path $PSScriptRoot 'beyond-oasis-coop.bps'
 if ((Get-FileHash -LiteralPath $patchPath -Algorithm SHA256).Hash -ne $manifest.bps_sha256) { throw 'BPS checksum mismatch.' }
 $source = [IO.File]::ReadAllBytes($inputPath)
 $patch = [IO.File]::ReadAllBytes($patchPath)

@@ -2,7 +2,7 @@ from probe import Core,ROOT
 from verify import word,put,byte,equip_sword
 import json,time
 import ctypes as C
-c=Core(ROOT.parent/'generated/Beyond Oasis Coop Immortal.bin');c.capture=False
+c=Core(ROOT.parent/'generated/Beyond Oasis Coop.bin');c.capture=False
 checks={};details={}
 def vram():
  # state_save: signature, work RAM, Z80 RAM, zstate/zbank, IO, SAT, VRAM.

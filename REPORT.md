@@ -1,4 +1,4 @@
-# Immortal6 validation report
+# Beyond Oasis Coop validation report
 
 Tested ROM SHA-256: `5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35`.
 
@@ -29,7 +29,7 @@ Tested ROM SHA-256: `5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32ad
 
 VRAM sampling covered 3,020 frames across beach, combat, village, cave, fire, map and first-battle story scenarios. The observed full-screen horizontal scroll table occupies DC00–DC03. Dialogue hiding and subsequent body reload were exercised. Save/restore and rollback compared all serialized bytes. Fire rendering was checked for P1, P2 and both burning simultaneously.
 
-The extracted Windows patcher and the pinned-payload Python builder both recreated the same ROM as the assembled source build. Original ROM and previous Immortal5 output were unchanged. Machine-readable results are in reports/.
+The extracted Windows patcher and the pinned-payload Python builder both recreated the same ROM as the assembled source build. Original ROM and previous build output were unchanged. Machine-readable results are in reports/.
 
 ## Limits
 

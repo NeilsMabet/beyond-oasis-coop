@@ -1,7 +1,7 @@
 """Headless behavioral checks against the real ROM and official libretro core."""
 import ctypes as C, hashlib, json, pathlib, time
 from probe import Core, ROOT
-ROM=ROOT.parent/'generated/Beyond Oasis Coop Immortal.bin'
+ROM=ROOT.parent/'generated/Beyond Oasis Coop.bin'
 def word(b,off):return int.from_bytes(b[off:off+2],'big')
 def put(c,off,value):C.memmove(c.dll.retro_get_memory_data(2)+off,value.to_bytes(2,'little'),2)
 def byte(c,off,value):C.memmove(c.dll.retro_get_memory_data(2)+(off^1),bytes([value]),1)

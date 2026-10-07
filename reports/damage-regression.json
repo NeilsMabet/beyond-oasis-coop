@@ -1,12 +1,12 @@
 {
-  "release": "immortal-6",
+  "release": "coop-6",
   "tested_rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35",
   "result": {
     "checks": {
       "old_damage_transfer_reproduced": true,
       "old_fire_transfer_reproduced": true,
       "p2_hits_do_not_damage_distant_p1": true,
-      "p2_keeps_reaction_and_immortality": true,
+      "p2_keeps_reaction_and_invulnerability": true,
       "direct_hits_still_damage_p1": true,
       "p2_fire_does_not_burn_or_damage_p1": true,
       "p2_fire_reaction_and_hp_preserved": true,

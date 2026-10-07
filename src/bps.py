@@ -10,7 +10,7 @@ def number(n):
         out.append(v);n-=1
 
 def create(source,target):
-    meta=b'Beyond Oasis Coop Immortal; original animation; dark P2; title caption; invulnerable P2.'
+    meta=b'Beyond Oasis Coop; original animation; dark P2; title caption; invulnerable P2.'
     out=bytearray(b'BPS1'+number(len(source))+number(len(target))+number(len(meta))+meta)
     source_cursor=0;target_cursor=0;written=0;stats=[0,0,0,0]
     def action(mode,data_or_length,offset=None):
@@ -82,8 +82,8 @@ if __name__=='__main__':
     import argparse
     parser=argparse.ArgumentParser()
     parser.add_argument('--rom',required=True,type=Path)
-    parser.add_argument('--target',type=Path,default=ROOT.parent/'generated/Beyond Oasis Coop Immortal.bin')
-    parser.add_argument('--output',type=Path,default=ROOT.parent/'beyond-oasis-coop-immortal.bps')
+    parser.add_argument('--target',type=Path,default=ROOT.parent/'generated/Beyond Oasis Coop.bin')
+    parser.add_argument('--output',type=Path,default=ROOT.parent/'beyond-oasis-coop.bps')
     args=parser.parse_args()
     source=args.rom.read_bytes();target=args.target.read_bytes()
     patch,stats=create(source,target)
