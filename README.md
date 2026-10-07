@@ -4,6 +4,12 @@
 
 An experimental two-player ROM hack of **Beyond Oasis** for the Sega Mega Drive / Genesis. **Beyond Oasis Coop** focuses on local co-op and fixes identified by the P2 memory audit.
 
+![Beyond Oasis Coop title screen](docs/images/title-preview.png)
+
+![Two heroes in a story scene](docs/images/story-preview.png)
+
+![Both heroes with fire effects](docs/images/burn-player-3.png)
+
 ## Current gameplay
 
 - Two independently controlled heroes: movement, jumping and attacks.
