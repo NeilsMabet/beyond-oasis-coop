@@ -3,7 +3,7 @@ param(
     [string]$Output = (Join-Path $PSScriptRoot 'generated\Beyond Oasis Coop.bin')
 )
 $ErrorActionPreference = 'Stop'
-if (-not (Test-Path -LiteralPath $Rom)) {
+if ([string]::IsNullOrWhiteSpace($Rom) -or -not (Test-Path -LiteralPath $Rom -PathType Leaf)) {
     Add-Type -AssemblyName System.Windows.Forms
     $picker = New-Object System.Windows.Forms.OpenFileDialog
     $picker.Title = 'Select original Beyond Oasis (U) ROM'
