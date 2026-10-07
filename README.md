@@ -51,6 +51,18 @@ Tests were run with **RetroArch 1.22.2** and **Genesis Plus GX v1.7.4-coop1**. T
 
 The launcher selects the bundled core. Other compatible emulators can load the patched ROM directly. The patcher-only archive omits the core and launcher. RetroArch itself is not modified or bundled; the core contains earlier state-serialization changes. See [third-party notices](THIRD_PARTY_NOTICES.md).
 
+### Linux patcher
+
+Install Python 3 using your distribution's package manager, then run from the extracted release folder:
+
+```bash
+bash create-coop-rom.sh "/path/to/Beyond Oasis.bin"
+```
+
+Without an argument, `bash create-coop-rom.sh` opens a file picker if Zenity or KDialog is available in a graphical session; otherwise it asks for the path in the terminal. Cancelling the picker exits without creating a ROM. A second argument selects the output path. The default output is `generated/Beyond Oasis Coop.bin` next to the script. Spaces in paths are supported. No additional Python packages are needed.
+
+You can also use `chmod +x create-coop-rom.sh` and launch it as `./create-coop-rom.sh`. The Windows core DLL is not needed on Linux; open the patched ROM in your compatible Linux emulator.
+
 ### Other ROM revisions
 
 There are many region, revision, overdump and headered variants. This release does not guess which one you have or silently patch a different revision. Check SHA-256 in PowerShell:

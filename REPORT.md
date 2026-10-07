@@ -19,3 +19,7 @@ Passed suites on the new ROM:
 Total: 72 checks passed.
 
 Previous gameplay audit results (113 checks) are preserved separately in reports/coop-6 and apply to the preceding ROM hash. The full campaign and new internet sessions were not tested for this art update. RetroArch and the core are unchanged. The Windows BPS patcher and source builder must reproduce the hash above.
+
+## Linux patcher helper
+
+Bash syntax and launcher branches were exercised using Git Bash on Windows, with a path-conversion shim for the Windows Python runtime. Covered: explicit paths with spaces, launch from another working directory, terminal file selection, empty selection, EOF, invalid arguments, simulated GUI cancellation, unsupported ROM and refusing to overwrite the source. The Python BPS applier reproduced the pinned ROM hash. Native Linux and real Zenity/KDialog windows were not exercised in this environment.

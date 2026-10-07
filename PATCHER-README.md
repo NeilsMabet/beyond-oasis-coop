@@ -1,4 +1,4 @@
-# Beyond Oasis Coop Windows patcher
+# Beyond Oasis Coop patcher
 
 Extract the archive and run **Create-Coop-ROM.cmd**. Select your unmodified Beyond Oasis (U) ROM. Only this SHA-256 is accepted:
 
@@ -15,3 +15,7 @@ Share this patcher, not a game ROM. Both players must use identical patched ROMs
 The resulting ROM can be loaded in any compatible Mega Drive / Genesis emulator on any platform with two controller ports. The included Windows patching scripts and tested RetroArch configuration are optional conveniences; universal emulator compatibility has not been individually verified.
 
 [English instructions](README.md) | [Русская инструкция](README.ru.md)
+
+## Linux
+
+Requires Python 3, no extra packages: `bash create-coop-rom.sh "/path/to/original.bin"`. Without a path, the script uses an optional Zenity/KDialog file picker or asks in the terminal. Output: `generated/Beyond Oasis Coop.bin`. The original is never overwritten.

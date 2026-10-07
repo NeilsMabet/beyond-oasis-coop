@@ -9,3 +9,5 @@ The ROM is intended for any compatible Mega Drive / Genesis emulator on any plat
 **BeyondOasisCoop.zip:** sources, screenshots, reports, patcher, tested modified core and its complete source, plus optional Windows launcher. **BeyondOasisCoop-patcher.zip:** patcher and patch sources. Supply your own supported original ROM. Neither archive contains a game ROM.
 
 [English instructions](https://github.com/NeilsMabet/beyond-oasis-coop/blob/main/README.md) | [Русская инструкция](https://github.com/NeilsMabet/beyond-oasis-coop/blob/main/README.ru.md)
+
+Linux patching helper included: `bash create-coop-rom.sh "/path/to/original.bin"`. Requires Python 3 only; optional Zenity/KDialog picker, or terminal input. Both release archives include it.
