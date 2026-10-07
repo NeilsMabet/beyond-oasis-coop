@@ -5,7 +5,7 @@
     "label": "route_01a39c",
     "instruction": "bset.b #$3, $ff1a1e.l",
     "preserves_p2_hp": false,
-    "address": 3148276
+    "address": 3148280
   },
   {
     "pc": 107428,
@@ -13,7 +13,7 @@
     "label": "route_01a3a4",
     "instruction": "bclr.b #$6, $ff1a1e.l",
     "preserves_p2_hp": false,
-    "address": 3148318
+    "address": 3148322
   },
   {
     "pc": 107436,
@@ -21,7 +21,7 @@
     "label": "route_01a3ac",
     "instruction": "ori.b #$c, $ff1a20.l",
     "preserves_p2_hp": false,
-    "address": 3148356
+    "address": 3148360
   },
   {
     "pc": 107444,
@@ -29,7 +29,7 @@
     "label": "route_01a3b4",
     "instruction": "andi.b #$f3, $ff1a21.l",
     "preserves_p2_hp": false,
-    "address": 3148394
+    "address": 3148398
   },
   {
     "pc": 107452,
@@ -37,7 +37,7 @@
     "label": "route_01a3bc",
     "instruction": "sf.b $ff1a6b.l",
     "preserves_p2_hp": false,
-    "address": 3148432
+    "address": 3148436
   },
   {
     "pc": 107458,
@@ -45,7 +45,7 @@
     "label": "route_01a3c2",
     "instruction": "move.w #$0, $ff1a12.l",
     "preserves_p2_hp": false,
-    "address": 3148466
+    "address": 3148470
   },
   {
     "pc": 107466,
@@ -53,7 +53,7 @@
     "label": "route_01a3ca",
     "instruction": "move.w #$2, $ff19ec.l",
     "preserves_p2_hp": false,
-    "address": 3148504
+    "address": 3148508
   },
   {
     "pc": 107500,
@@ -61,7 +61,7 @@
     "label": "route_01a3ec",
     "instruction": "cmpi.w #$14, $ff1a32.l",
     "preserves_p2_hp": false,
-    "address": 3148542
+    "address": 3148546
   },
   {
     "pc": 107538,
@@ -69,7 +69,7 @@
     "label": "route_01a412",
     "instruction": "btst.b #$3, $ff1a20.l",
     "preserves_p2_hp": false,
-    "address": 3148580
+    "address": 3148584
   },
   {
     "pc": 107608,
@@ -77,7 +77,7 @@
     "label": "route_01a458",
     "instruction": "tst.l $ff19f8.l",
     "preserves_p2_hp": false,
-    "address": 3148618
+    "address": 3148622
   },
   {
     "pc": 107618,
@@ -85,7 +85,7 @@
     "label": "route_01a462",
     "instruction": "tst.b $ff1a6a.l",
     "preserves_p2_hp": false,
-    "address": 3148652
+    "address": 3148656
   },
   {
     "pc": 108152,
@@ -93,7 +93,7 @@
     "label": "route_01a678",
     "instruction": "btst.b #$3, $ff1a20.l",
     "preserves_p2_hp": false,
-    "address": 3148686
+    "address": 3148690
   },
   {
     "pc": 108218,
@@ -101,7 +101,7 @@
     "label": "route_01a6ba",
     "instruction": "tst.l $ff19f8.l",
     "preserves_p2_hp": false,
-    "address": 3148724
+    "address": 3148728
   },
   {
     "pc": 108228,
@@ -109,7 +109,7 @@
     "label": "route_01a6c4",
     "instruction": "tst.b $ff1a6a.l",
     "preserves_p2_hp": false,
-    "address": 3148758
+    "address": 3148762
   },
   {
     "pc": 108424,
@@ -117,7 +117,7 @@
     "label": "route_01a788",
     "instruction": "btst.b #$3, $ff1a20.l",
     "preserves_p2_hp": false,
-    "address": 3148792
+    "address": 3148796
   },
   {
     "pc": 108508,
@@ -125,7 +125,7 @@
     "label": "route_01a7dc",
     "instruction": "tst.l $ff19f8.l",
     "preserves_p2_hp": false,
-    "address": 3148830
+    "address": 3148834
   },
   {
     "pc": 108518,
@@ -133,7 +133,7 @@
     "label": "route_01a7e6",
     "instruction": "tst.b $ff1a6a.l",
     "preserves_p2_hp": false,
-    "address": 3148864
+    "address": 3148868
   },
   {
     "pc": 109336,
@@ -141,7 +141,7 @@
     "label": "route_01ab18",
     "instruction": "move.w $8(a6), $ff19f0.l",
     "preserves_p2_hp": false,
-    "address": 3148898
+    "address": 3148902
   },
   {
     "pc": 109344,
@@ -149,7 +149,7 @@
     "label": "route_01ab20",
     "instruction": "move.w $c(a6), $ff19f4.l",
     "preserves_p2_hp": false,
-    "address": 3148936
+    "address": 3148940
   },
   {
     "pc": 109354,
@@ -157,7 +157,7 @@
     "label": "route_01ab2a",
     "instruction": "move.l d0, $ff1a5a.l",
     "preserves_p2_hp": false,
-    "address": 3148974
+    "address": 3148978
   },
   {
     "pc": 109360,
@@ -165,7 +165,7 @@
     "label": "route_01ab30",
     "instruction": "move.l d0, $ff1a5e.l",
     "preserves_p2_hp": false,
-    "address": 3149008
+    "address": 3149012
   },
   {
     "pc": 109366,
@@ -173,7 +173,7 @@
     "label": "route_01ab36",
     "instruction": "move.w #$48, $ff19f8.l",
     "preserves_p2_hp": false,
-    "address": 3149042
+    "address": 3149046
   },
   {
     "pc": 109374,
@@ -181,7 +181,7 @@
     "label": "route_01ab3e",
     "instruction": "move.w #$0, $ff19fe.l",
     "preserves_p2_hp": false,
-    "address": 3149080
+    "address": 3149084
   },
   {
     "pc": 109382,
@@ -189,7 +189,7 @@
     "label": "route_01ab46",
     "instruction": "bset.b #$0, $ff1a1f.l",
     "preserves_p2_hp": false,
-    "address": 3149118
+    "address": 3149122
   },
   {
     "pc": 109390,
@@ -197,7 +197,7 @@
     "label": "route_01ab4e",
     "instruction": "move.w #$13c, $ff1a1a.l",
     "preserves_p2_hp": false,
-    "address": 3149156
+    "address": 3149160
   },
   {
     "pc": 109496,
@@ -205,7 +205,7 @@
     "label": "route_01abb8",
     "instruction": "move.w #$45, $ff19f8.l",
     "preserves_p2_hp": false,
-    "address": 3149194
+    "address": 3149198
   },
   {
     "pc": 109516,
@@ -213,7 +213,7 @@
     "label": "route_01abcc",
     "instruction": "move.w $ff1a72.l, d0",
     "preserves_p2_hp": false,
-    "address": 3149232
+    "address": 3149236
   },
   {
     "pc": 109534,
@@ -221,7 +221,7 @@
     "label": "route_01abde",
     "instruction": "move.w d0, $ff1a72.l",
     "preserves_p2_hp": true,
-    "address": 3149266
+    "address": 3149270
   },
   {
     "pc": 109548,
@@ -229,7 +229,7 @@
     "label": "route_01abec",
     "instruction": "move.w #$48, $ff19f8.l",
     "preserves_p2_hp": false,
-    "address": 3149322
+    "address": 3149326
   },
   {
     "pc": 109564,
@@ -237,7 +237,7 @@
     "label": "route_01abfc",
     "instruction": "sf.b $ff1982.l",
     "preserves_p2_hp": false,
-    "address": 3149360
+    "address": 3149364
   },
   {
     "pc": 109570,
@@ -245,7 +245,7 @@
     "label": "route_01ac02",
     "instruction": "bclr.b #$3, $ff1a1e.l",
     "preserves_p2_hp": false,
-    "address": 3149398
+    "address": 3149402
   },
   {
     "pc": 109578,
@@ -253,7 +253,7 @@
     "label": "route_01ac0a",
     "instruction": "bclr.b #$0, $ff1a1f.l",
     "preserves_p2_hp": false,
-    "address": 3149436
+    "address": 3149440
   },
   {
     "pc": 109586,
@@ -261,7 +261,7 @@
     "label": "route_01ac12",
     "instruction": "andi.b #$f3, $ff1a20.l",
     "preserves_p2_hp": false,
-    "address": 3149474
+    "address": 3149478
   },
   {
     "pc": 109594,
@@ -269,7 +269,7 @@
     "label": "route_01ac1a",
     "instruction": "move.w #$26, $ff1a12.l",
     "preserves_p2_hp": false,
-    "address": 3149512
+    "address": 3149516
   },
   {
     "pc": 109602,
@@ -277,7 +277,7 @@
     "label": "route_01ac22",
     "instruction": "clr.w $ff19fe.l",
     "preserves_p2_hp": false,
-    "address": 3149550
+    "address": 3149554
   },
   {
     "pc": 109608,
@@ -285,7 +285,7 @@
     "label": "route_01ac28",
     "instruction": "clr.w $ff19ec.l",
     "preserves_p2_hp": false,
-    "address": 3149584
+    "address": 3149588
   },
   {
     "pc": 109622,
@@ -293,7 +293,7 @@
     "label": "route_01ac36",
     "instruction": "move.w d0, $ff1a6e.l",
     "preserves_p2_hp": false,
-    "address": 3149618
+    "address": 3149622
   },
   {
     "pc": 109628,
@@ -301,7 +301,7 @@
     "label": "route_01ac3c",
     "instruction": "move.l a6, $ff1a66.l",
     "preserves_p2_hp": false,
-    "address": 3149652
+    "address": 3149656
   },
   {
     "pc": 109634,
@@ -309,7 +309,7 @@
     "label": "route_01ac42",
     "instruction": "move.w #$2, $ff1a6c.l",
     "preserves_p2_hp": false,
-    "address": 3149686
+    "address": 3149690
   },
   {
     "pc": 109642,
@@ -317,7 +317,7 @@
     "label": "route_01ac4a",
     "instruction": "move.b #$1, $ff1a6a.l",
     "preserves_p2_hp": false,
-    "address": 3149724
+    "address": 3149728
   },
   {
     "pc": 109650,
@@ -325,7 +325,7 @@
     "label": "route_01ac52",
     "instruction": "move.b #$6, $ff1a6b.l",
     "preserves_p2_hp": false,
-    "address": 3149762
+    "address": 3149766
   },
   {
     "pc": 109674,
@@ -333,7 +333,7 @@
     "label": "route_01ac6a",
     "instruction": "move.l d1, $ff1a36.l",
     "preserves_p2_hp": false,
-    "address": 3149800
+    "address": 3149804
   },
   {
     "pc": 109680,
@@ -341,7 +341,7 @@
     "label": "route_01ac70",
     "instruction": "move.l d2, $ff1a3a.l",
     "preserves_p2_hp": false,
-    "address": 3149834
+    "address": 3149838
   },
   {
     "pc": 109686,
@@ -349,7 +349,7 @@
     "label": "route_01ac76",
     "instruction": "move.l #$28000, $ff1a3e.l",
     "preserves_p2_hp": false,
-    "address": 3149868
+    "address": 3149872
   },
   {
     "pc": 109696,
@@ -357,7 +357,7 @@
     "label": "route_01ac80",
     "instruction": "move.l #$110000, $ff1a5e.l",
     "preserves_p2_hp": false,
-    "address": 3149910
+    "address": 3149914
   },
   {
     "pc": 117826,
@@ -365,7 +365,7 @@
     "label": "route_01cc42",
     "instruction": "btst.b #$3, $ff1a20.l",
     "preserves_p2_hp": false,
-    "address": 3149952
+    "address": 3149956
   },
   {
     "pc": 117836,
@@ -373,7 +373,7 @@
     "label": "route_01cc4c",
     "instruction": "tst.l $ff19f8.l",
     "preserves_p2_hp": false,
-    "address": 3149990
+    "address": 3149994
   },
   {
     "pc": 117844,
@@ -381,7 +381,7 @@
     "label": "route_01cc54",
     "instruction": "cmpi.w #$28, $ff1a32.l",
     "preserves_p2_hp": false,
-    "address": 3150024
+    "address": 3150028
   },
   {
     "pc": 117854,
@@ -389,7 +389,7 @@
     "label": "route_01cc5e",
     "instruction": "move.w $ff19fc.l, d0",
     "preserves_p2_hp": false,
-    "address": 3150062
+    "address": 3150066
   },
   {
     "pc": 117866,
@@ -397,7 +397,7 @@
     "label": "route_01cc6a",
     "instruction": "tst.b $ff198b.l",
     "preserves_p2_hp": false,
-    "address": 3150096
+    "address": 3150100
   },
   {
     "pc": 117874,
@@ -405,7 +405,7 @@
     "label": "route_01cc72",
     "instruction": "tst.b $ff1987.l",
     "preserves_p2_hp": false,
-    "address": 3150130
+    "address": 3150134
   },
   {
     "pc": 117882,
@@ -413,7 +413,7 @@
     "label": "route_01cc7a",
     "instruction": "move.w $ff19f0.l, d0",
     "preserves_p2_hp": false,
-    "address": 3150164
+    "address": 3150168
   },
   {
     "pc": 117896,
@@ -421,7 +421,7 @@
     "label": "route_01cc88",
     "instruction": "move.w $ff19f4.l, d0",
     "preserves_p2_hp": false,
-    "address": 3150198
+    "address": 3150202
   },
   {
     "pc": 117948,
@@ -429,7 +429,7 @@
     "label": "route_01ccbc",
     "instruction": "tst.b $ff1989.l",
     "preserves_p2_hp": false,
-    "address": 3150232
+    "address": 3150236
   },
   {
     "pc": 118004,
@@ -437,7 +437,7 @@
     "label": "route_01ccf4",
     "instruction": "move.w $ff1a72.l, d1",
     "preserves_p2_hp": false,
-    "address": 3150266
+    "address": 3150270
   },
   {
     "pc": 118020,
@@ -445,7 +445,7 @@
     "label": "route_01cd04",
     "instruction": "move.w #$1, $ff1a6e.l",
     "preserves_p2_hp": false,
-    "address": 3150300
+    "address": 3150304
   },
   {
     "pc": 118028,
@@ -453,7 +453,7 @@
     "label": "route_01cd0c",
     "instruction": "move.w $16(a6), $ff1a6c.l",
     "preserves_p2_hp": false,
-    "address": 3150338
+    "address": 3150342
   },
   {
     "pc": 118036,
@@ -461,7 +461,7 @@
     "label": "route_01cd14",
     "instruction": "move.l a6, $ff1a66.l",
     "preserves_p2_hp": false,
-    "address": 3150376
+    "address": 3150380
   },
   {
     "pc": 118042,
@@ -469,7 +469,7 @@
     "label": "route_01cd1a",
     "instruction": "move.b #$1, $ff1a6a.l",
     "preserves_p2_hp": false,
-    "address": 3150410
+    "address": 3150414
   },
   {
     "pc": 118050,
@@ -477,7 +477,7 @@
     "label": "route_01cd22",
     "instruction": "move.b #$6, $ff1a6b.l",
     "preserves_p2_hp": false,
-    "address": 3150448
+    "address": 3150452
   },
   {
     "pc": 118076,
@@ -485,7 +485,7 @@
     "label": "route_01cd3c",
     "instruction": "move.w d1, $ff1a72.l",
     "preserves_p2_hp": true,
-    "address": 3150486
+    "address": 3150490
   },
   {
     "pc": 132988,
@@ -493,7 +493,7 @@
     "label": "route_02077c",
     "instruction": "bset.b #$6, $ff1a1e.l",
     "preserves_p2_hp": false,
-    "address": 3150542
+    "address": 3150546
   },
   {
     "pc": 132996,
@@ -501,7 +501,7 @@
     "label": "route_020784",
     "instruction": "ori.b #$c, $ff1a20.l",
     "preserves_p2_hp": false,
-    "address": 3150584
+    "address": 3150588
   },
   {
     "pc": 133004,
@@ -509,7 +509,7 @@
     "label": "route_02078c",
     "instruction": "andi.b #$f3, $ff1a21.l",
     "preserves_p2_hp": false,
-    "address": 3150622
+    "address": 3150626
   },
   {
     "pc": 133012,
@@ -517,7 +517,7 @@
     "label": "route_020794",
     "instruction": "sf.b $ff1a6b.l",
     "preserves_p2_hp": false,
-    "address": 3150660
+    "address": 3150664
   },
   {
     "pc": 133018,
@@ -525,7 +525,7 @@
     "label": "route_02079a",
     "instruction": "move.w #$2, $ff19ec.l",
     "preserves_p2_hp": false,
-    "address": 3150694
+    "address": 3150698
   },
   {
     "pc": 133030,
@@ -533,7 +533,7 @@
     "label": "route_0207a6",
     "instruction": "cmpi.w #$3, $ff19fe.l",
     "preserves_p2_hp": false,
-    "address": 3150732
+    "address": 3150736
   },
   {
     "pc": 133060,
@@ -541,7 +541,7 @@
     "label": "route_0207c4",
     "instruction": "move.w d0, $ff1a12.l",
     "preserves_p2_hp": false,
-    "address": 3150770
+    "address": 3150774
   },
   {
     "pc": 133066,
@@ -549,7 +549,7 @@
     "label": "route_0207ca",
     "instruction": "clr.l $ff1a5a.l",
     "preserves_p2_hp": false,
-    "address": 3150804
+    "address": 3150808
   },
   {
     "pc": 133072,
@@ -557,7 +557,7 @@
     "label": "route_0207d0",
     "instruction": "clr.l $ff1a5e.l",
     "preserves_p2_hp": false,
-    "address": 3150838
+    "address": 3150842
   },
   {
     "pc": 133126,
@@ -565,7 +565,7 @@
     "label": "route_020806",
     "instruction": "sf.b $ff1982.l",
     "preserves_p2_hp": false,
-    "address": 3150872
+    "address": 3150876
   },
   {
     "pc": 133132,
@@ -573,7 +573,7 @@
     "label": "route_02080c",
     "instruction": "sf.b $ff1987.l",
     "preserves_p2_hp": false,
-    "address": 3150910
+    "address": 3150914
   },
   {
     "pc": 133138,
@@ -581,7 +581,7 @@
     "label": "route_020812",
     "instruction": "bclr.b #$6, $ff1a1e.l",
     "preserves_p2_hp": false,
-    "address": 3150944
+    "address": 3150948
   },
   {
     "pc": 133146,
@@ -589,7 +589,7 @@
     "label": "route_02081a",
     "instruction": "andi.b #$f3, $ff1a20.l",
     "preserves_p2_hp": false,
-    "address": 3150982
+    "address": 3150986
   },
   {
     "pc": 133154,
@@ -597,7 +597,7 @@
     "label": "route_020822",
     "instruction": "move.w #$0, $ff1a12.l",
     "preserves_p2_hp": false,
-    "address": 3151020
+    "address": 3151024
   },
   {
     "pc": 133162,
@@ -605,7 +605,7 @@
     "label": "route_02082a",
     "instruction": "move.w #$0, $ff19ec.l",
     "preserves_p2_hp": false,
-    "address": 3151058
+    "address": 3151062
   },
   {
     "pc": 133730,
@@ -613,7 +613,7 @@
     "label": "route_020a62",
     "instruction": "tst.b $ff1989.l",
     "preserves_p2_hp": false,
-    "address": 3151096
+    "address": 3151100
   },
   {
     "pc": 133748,
@@ -621,7 +621,7 @@
     "label": "route_020a74",
     "instruction": "subq.w #$3, $ff1a76.l",
     "preserves_p2_hp": false,
-    "address": 3151130
+    "address": 3151134
   },
   {
     "pc": 133758,
@@ -629,7 +629,7 @@
     "label": "route_020a7e",
     "instruction": "clr.w $ff1a76.l",
     "preserves_p2_hp": false,
-    "address": 3151164
+    "address": 3151168
   },
   {
     "pc": 133766,
@@ -637,7 +637,7 @@
     "label": "route_020a86",
     "instruction": "lea.l $ff19e8.l, a0",
     "preserves_p2_hp": false,
-    "address": 3151198
+    "address": 3151202
   },
   {
     "pc": 133880,
@@ -645,7 +645,7 @@
     "label": "route_020af8",
     "instruction": "move.w d0, $ff19fe.l",
     "preserves_p2_hp": false,
-    "address": 3151232
+    "address": 3151236
   },
   {
     "pc": 133916,
@@ -653,7 +653,7 @@
     "label": "route_020b1c",
     "instruction": "move.w d1, $ff1a12.l",
     "preserves_p2_hp": false,
-    "address": 3151266
+    "address": 3151270
   },
   {
     "pc": 146194,
@@ -661,7 +661,7 @@
     "label": "route_023b12",
     "instruction": "move.w $ff19f0.l, d0",
     "preserves_p2_hp": false,
-    "address": 3151300
+    "address": 3151304
   },
   {
     "pc": 146218,
@@ -669,7 +669,7 @@
     "label": "route_023b2a",
     "instruction": "btst.b #$3, $ff1a20.l",
     "preserves_p2_hp": false,
-    "address": 3151334
+    "address": 3151338
   },
   {
     "pc": 146230,
@@ -677,7 +677,7 @@
     "label": "route_023b36",
     "instruction": "cmpi.w #$14, $ff1a32.l",
     "preserves_p2_hp": false,
-    "address": 3151372
+    "address": 3151376
   },
   {
     "pc": 146242,
@@ -685,7 +685,7 @@
     "label": "route_023b42",
     "instruction": "move.l a6, $ff1a66.l",
     "preserves_p2_hp": false,
-    "address": 3151410
+    "address": 3151414
   },
   {
     "pc": 146248,
@@ -693,7 +693,7 @@
     "label": "route_023b48",
     "instruction": "move.b #$1, $ff1a6a.l",
     "preserves_p2_hp": false,
-    "address": 3151444
+    "address": 3151448
   },
   {
     "pc": 146256,
@@ -701,7 +701,7 @@
     "label": "route_023b50",
     "instruction": "move.b #$6, $ff1a6b.l",
     "preserves_p2_hp": false,
-    "address": 3151482
+    "address": 3151486
   },
   {
     "pc": 146264,
@@ -709,7 +709,7 @@
     "label": "route_023b58",
     "instruction": "move.w #$a032, $ff1a6e.l",
     "preserves_p2_hp": false,
-    "address": 3151520
+    "address": 3151524
   },
   {
     "pc": 146272,
@@ -717,7 +717,7 @@
     "label": "route_023b60",
     "instruction": "move.w #$2, $ff1a6c.l",
     "preserves_p2_hp": false,
-    "address": 3151558
+    "address": 3151562
   },
   {
     "pc": 146298,
@@ -725,7 +725,7 @@
     "label": "route_023b7a",
     "instruction": "move.l d1, $ff1a36.l",
     "preserves_p2_hp": false,
-    "address": 3151596
+    "address": 3151600
   },
   {
     "pc": 146304,
@@ -733,7 +733,7 @@
     "label": "route_023b80",
     "instruction": "move.l d2, $ff1a3a.l",
     "preserves_p2_hp": false,
-    "address": 3151630
+    "address": 3151634
   },
   {
     "pc": 146310,
@@ -741,6 +741,6 @@
     "label": "route_023b86",
     "instruction": "move.l #$28000, $ff1a3e.l",
     "preserves_p2_hp": false,
-    "address": 3151664
+    "address": 3151668
   }
 ]

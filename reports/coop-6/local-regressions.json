@@ -1,6 +1,6 @@
 {
-  "release": "coop-7",
-  "tested_rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
+  "release": "coop-6",
+  "tested_rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35",
   "result": {
     "checks": {
       "p2_bow_no_self_hit_four_directions": true,
@@ -50,15 +50,15 @@
         }
       ],
       "same_attack": {
-        "frame": 276,
+        "frame": 338,
         "pending_damage": [
           32772,
           0
         ]
       },
       "p2_enemy_hit": {
-        "frame": 344,
-        "pending_damage": 32784
+        "frame": 96,
+        "pending_damage": 4
       },
       "health_after_same_attack": [
         196,

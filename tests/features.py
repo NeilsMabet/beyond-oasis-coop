@@ -10,10 +10,12 @@ off=16+65536+8192+1+4+16+1024
 c=Core(ROM);c.run(1000);c.run(8,[3]);c.run(150)
 caption=c.picture.copy();s=c.state()
 vram=np.frombuffer(s[off:off+65536],dtype='<u2')
-expected=[0x61c1+0x5c0+ord(x)-32 for x in 'Coop version']
-checks['title_uses_original_font_and_palette']=vram[0xc91c//2:0xc91c//2+12].tolist()==expected
+expected=[0x46a0+i for i in range(54)]
+def gold_map(v):
+ return [int(v[(0xc896+row*128)//2+col]) for row in range(3) for col in range(18)]
+checks['title_uses_gold_subtitle_tiles']=gold_map(vram)==expected
 c.run(240);vram2=np.frombuffer(c.state()[off:off+65536],dtype='<u2')
-checks['caption_persists_while_start_prompt_blinks']=vram2[0xc91c//2:0xc91c//2+12].tolist()==expected
+checks['caption_persists_while_start_prompt_blinks']=gold_map(vram2)==expected
 Image.fromarray(caption).resize((640,448),Image.Resampling.NEAREST).save(ROOT.parent/'title-preview.png')
 c.dll.retro_unload_game();c.dll.retro_deinit()
 # Pixel comparison with the preceding build proves only the caption is added.
@@ -21,7 +23,7 @@ baseline=ROOT.parent.parent/'BeyondOasisCoop-DarkP2/generated/Beyond Oasis Coop 
 if baseline.exists():
  c=Core(baseline);c.run(1000);c.run(8,[3]);c.run(150)
  diff=np.any(c.picture!=caption,axis=2);ys,xs=np.where(diff)
- checks['title_pixels_only_change_inside_caption']=len(xs)>0 and xs.min()>=112 and xs.max()<208 and ys.min()>=144 and ys.max()<152
+ checks['title_pixels_only_change_inside_caption']=len(xs)>0 and xs.min()>=88 and xs.max()<232 and ys.min()>=136 and ys.max()<160
  details['title_changed_pixel_bounds']=[int(xs.min()),int(ys.min()),int(xs.max()),int(ys.max())]
  c.dll.retro_unload_game();c.dll.retro_deinit()
 c=Core(ROM);c.capture=False;c.load('test-beach');base=c.state()

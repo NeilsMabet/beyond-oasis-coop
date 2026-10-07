@@ -29,3 +29,7 @@ src/target-routes.json pins 93 source instructions, expected bytes and adapter a
 Adapters preserve SR. The P1 branch executes the original instruction; the P2 branch substitutes personal actor/metadata addresses. Direct health writes preserve P2 HP. Do not globally redirect every P1 literal: camera, story and inventory intentionally belong to P1.
 
 Unproven or unreachable animation-index candidates from the audit were not changed. These notes describe bounded evidence, not full-campaign compatibility.
+
+## Gold title subtitle
+
+Title-only helper at ROM 30D000 loads 54 tiles from 30D100 into D400–DABF. The subtitle tilemap uses palette 2 and plane A at C896/C916/C996. The title background uses tiles 000–452 and palette 0; original text uses 780+ and palette 3. Palette RAM FF138E (palette 2, index 1) is blackened for the outline. Original title load establishes the remaining colors and normal room loading replaces the palette. `title-gold.bin` is the native asset derived from the approved artwork.

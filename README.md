@@ -80,7 +80,7 @@ python src/build.py --rom "C:\Games\Beyond Oasis.bin" --assembler "C:\Tools\vasm
 The builder verifies the original ROM, payload, expected original instructions and output SHA-256. The pinned release must reproduce:
 
 ```text
-5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35
+83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2
 ```
 
 Generate the BPS patch after building:
@@ -93,7 +93,7 @@ For intentional source changes, developers must regenerate the native adapter ad
 
 ## Validation and known limits
 
-**113 checks passed** on the pinned Beyond Oasis Coop ROM. Coverage includes local controls, weapons, damage isolation, hit reactions, the first story battle, burning graphics, save/restore, deterministic rollback, allocator exclusions and audited grab/drain handlers. VRAM sampling covered 3,020 frames across seven bounded scenarios.
+The preceding gameplay build passed **113 checks**. The gold-title update also passed the title pixel comparison and the basic gameplay, feature, local regression, hit reaction serialized rollback and native audit fixture suites. Previous coverage includes local controls, weapons, damage isolation, hit reactions, the first story battle, burning graphics, save/restore, deterministic rollback, allocator exclusions and audited grab/drain handlers. VRAM sampling covered 3,020 frames across seven bounded scenarios.
 
 See [validation report](REPORT.md), [technical notes](RESEARCH.md) and machine-readable results in `reports/`. Tests use Python with NumPy/Pillow; native fixtures also require vasm. Some tests need private gameplay save states that are not distributed. Full campaign coverage, every enemy and graphics mode, and internet session acceptance remain unverified.
 

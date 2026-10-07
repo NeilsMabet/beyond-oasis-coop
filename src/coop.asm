@@ -447,10 +447,8 @@ effects_ready:
 ; Title uses the original game's font, palette and plane, before fade-in.
 title_caption:
         movem.l d0-d7/a0-a6,-(sp)
-        lea caption_text,a6
-        move.l #$491c0003,d5
-        move.w #$61c1,d6
-        jsr $2ce4
+        jsr $30d000
+        dcb.b 16,0
         movem.l (sp)+,d0-d7/a0-a6
         tst.b $ff0bfd
         rts
@@ -1723,5 +1721,33 @@ route_023b86_p1:
         move.w (sp)+,sr
         dc.b $23,$fc,$00,$02,$80,$00,$00,$ff,$1a,$3e
         rts
+; Gold subtitle uses 54 otherwise unreferenced title-only tiles, D400-DABF.
+; The title background uses tiles 000-452; the original font uses 780+.
+        dcb.b $30d000-*,0
+gold_title:
+; Palette 2 is unused by the original title planes; give its outline pure black.
+        clr.w $ff138e
+        move.w #$8f02,$c00004
+        move.l #$54000003,$c00004
+        lea $30d100,a0
+        move.w #863,d0
+gold_tile_copy:
+        move.w (a0)+,$c00000
+        dbra d0,gold_tile_copy
+        move.l #$48960003,d1
+        move.w #$46a0,d2
+        moveq #2,d3
+gold_map_row:
+        move.l d1,$c00004
+        moveq #17,d0
+gold_map_column:
+        move.w d2,$c00000
+        addq.w #1,d2
+        dbra d0,gold_map_column
+        addi.l #$00800000,d1
+        dbra d3,gold_map_row
+        rts
+        dcb.b $30d100-*,0
+        incbin "title-gold.bin"
         dcb.b $310000-*,0
 ; Darkened source tiles are derived from the user's original ROM by build.py.

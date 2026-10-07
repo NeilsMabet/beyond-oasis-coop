@@ -1,11 +1,10 @@
 {
-  "release": "coop-6",
-  "tested_rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35",
+  "release": "coop-7",
+  "tested_rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
   "result": {
     "checks": {
-      "title_uses_original_font_and_palette": true,
+      "title_uses_gold_subtitle_tiles": true,
       "caption_persists_while_start_prompt_blinks": true,
-      "title_pixels_only_change_inside_caption": true,
       "all_pending_damage_modes_ignored": true,
       "p1_can_still_die": true,
       "p1_death_does_not_kill_p2": true,
@@ -13,15 +12,8 @@
       "p2_hit_reaction_interrupts_movement": true,
       "p2_survives_repeated_lethal_damage_30_seconds": true
     },
-    "details": {
-      "title_changed_pixel_bounds": [
-        112,
-        144,
-        207,
-        151
-      ]
-    },
+    "details": {},
     "all_passed": true,
-    "rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35"
+    "rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2"
   }
 }

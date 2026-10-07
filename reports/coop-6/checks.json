@@ -1,6 +1,6 @@
 {
-  "release": "coop-7",
-  "tested_rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
+  "release": "coop-6",
+  "tested_rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35",
   "result": {
     "checks": {
       "cold_boot_checksum": true,
@@ -23,7 +23,7 @@
       "last_sword_unit_no_underflow": true
     },
     "all_passed": true,
-    "rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
-    "state_sha256": "06fb05c98b13979a99d0e63334b010ca1a887db336cd8f3792c60e4c22c27889"
+    "rom_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35",
+    "state_sha256": "9056509d210239ead6c48ae845dee56fa4b06db6167814ed0ec8ed5b99d53b46"
   }
 }

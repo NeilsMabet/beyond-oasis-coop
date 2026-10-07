@@ -1,9 +1,9 @@
 {
   "status": "local-coop",
   "original_sha256": "eb19bda4982366a2fd43d65ab8a7f9709d83a8cc902c14a682c088c16359c263",
-  "patched_sha256": "5248dfd2b06b7c736ad1212f8709128855fd5253012f75b25e2f21f32adc5a35",
+  "patched_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
   "patched_size": 3538944,
-  "payload_sha256": "340198981c15fe6740dcd04301e47c5f0307e4b5df3b7774b7d7bc124defd57b",
+  "payload_sha256": "e5d7997d662c6fef42de96e49998b9b60dbef50acd094f58e6eb0a65db0fd8fc",
   "core_sha256": "d16d2739137e6c85fd6f1fee3f59c56e89294675322a420640247acc3a12dba2",
   "retroarch_version": "1.22.2",
   "assembler": "vasm 1.9d m68k mot, source commit 685a87e5ed14285350ccdb6581c9771bc8df6c7d",
@@ -15,18 +15,23 @@
   "core_state_version": "GENPLUS-GX 1.7.C",
   "core_compiler": "Zig 0.13.0 x86_64-windows-gnu -O2",
   "core_source_sha256": "d0984c4713edfd20939561c75851c7f72141b9bcf67f563b504152f3fc039991",
-  "release": "coop-6",
-  "bps_sha256": "efc78a10f0fee62fb04569eb0cab153bfce99e2bb76b9b65a3de7f58d3e68045",
+  "release": "coop-7",
+  "bps_sha256": "aebe182695412c375e0005956c97b6d9937d9a83833fc9d8fdbef732ef02ea1c",
   "character": "original P2, deterministic 25 percent indexed-color dimming",
   "art_source_start": "0x0C0000",
   "art_source_end": "0x10F100",
   "art_target_start": "0x310000",
   "p2_health": "HP unchanged on hits; original hit reaction enabled",
-  "title_caption": "Coop version, original font",
+  "title_caption": "Gold Coop Version subtitle, 54 title-only 4bpp tiles at VRAM D400-DABF, palette 2 with black outline",
   "story_fix": "exclude META/P2 from hostile-enemy counter at 0x101F4",
   "damage_fix": "Selected-hero native adapters for audited attack/grab/drain paths; P2 HP remains unchanged",
   "graphics_fix": "P2 body B800-BFFF; weapon DC20-DE1F; stock small-object pool retained; immutable ROM effect restoration",
   "native_target_adapters": 93,
   "dialogue_guard": "P2 pauses and is hidden during native story/menu graphics ownership; body and weapon caches reload afterwards",
-  "grab_target": "Per-actor capture ownership until release; masks cleared on room spawn"
+  "grab_target": "Per-actor capture ownership until release; masks cleared on room spawn",
+  "title_art_sha256": "348770a5ca60b65b27073b7c19a7cadc75947d4f264a15feb4680fdf05081bf3",
+  "test_helper_addresses": {
+    "grab_lock": 3148124,
+    "grab_unlock": 3148224
+  }
 }

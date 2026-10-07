@@ -1,0 +1,6 @@
+{
+  "rom_sha256": "83b6161c3df8c15a211d492a57c67c46412c49090a2a0bd4114e2d6937d3a7f2",
+  "checks": {
+    "only_subtitle_pixels_changed": true
+  }
+}
